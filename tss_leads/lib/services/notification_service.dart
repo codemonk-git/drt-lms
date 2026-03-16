@@ -1,6 +1,7 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/data/latest_all.dart' as tz_data;
 import 'package:timezone/timezone.dart' as tz;
+import 'dart:convert';
 
 typedef NotificationTapCallback = void Function(String? payload);
 
@@ -215,6 +216,7 @@ class NotificationService {
     required String followupType,
     required String leadName,
     required String? notes,
+    required String? leadId,
   }) async {
     final title = '${followupType.toUpperCase()} Reminder';
     String body = 'Time to follow up with $leadName';
@@ -241,11 +243,15 @@ class NotificationService {
       android: androidPlatformChannelSpecifics,
     );
 
+    // Create payload with lead_id for deep linking
+    final String payload = jsonEncode({'lead_id': leadId ?? ''});
+
     await _notificationsPlugin.show(
       id: id.hashCode, // Use hash of id to ensure uniqueness
       title: title,
       body: body,
       notificationDetails: platformChannelSpecifics,
+      payload: payload,
     );
   }
 

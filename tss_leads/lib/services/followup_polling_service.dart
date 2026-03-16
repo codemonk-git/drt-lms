@@ -98,6 +98,7 @@ class FollowupPollingService {
         final followupType = followup['followup_type'] as String? ?? 'Followup';
         final leadName = followup['lead_name'] as String? ?? 'Lead';
         final notes = followup['notes'] as String?;
+        final leadId = followup['id'] as String?;
 
         try {
           await NotificationService.showFollowupNotification(
@@ -105,6 +106,7 @@ class FollowupPollingService {
             followupType: followupType,
             leadName: leadName,
             notes: notes,
+            leadId: leadId,
           );
         } catch (e) {
           // Silent fail
