@@ -812,31 +812,29 @@ class _LeadDetailScreenState extends State<LeadDetailScreen> {
                       'Contact Type',
                       lead.details.lastContactType!,
                     ),
-                  if (lead.createdByUserId != null &&
-                      lead.createdByUserId!.isNotEmpty)
-                    _InfoRow(
-                      Icons.person_add_outlined,
-                      'Created by',
-                      lead.createdByUserName ??
-                          lead.createdByUserId ??
-                          'Unknown',
-                    ),
-                  if (lead.source.platform.isNotEmpty)
-                    _InfoRow(
-                      Icons.source_outlined,
-                      'Source',
-                      lead.source.platform,
-                    ),
                 ],
               ),
               const SizedBox(height: 8),
 
               // Custom Fields Section
-              if (lead.details.customFields != null &&
-                  lead.details.customFields!.isNotEmpty)
-                _CustomFieldsSection(customFields: lead.details.customFields!),
-              if (lead.details.customFields != null &&
-                  lead.details.customFields!.isNotEmpty)
+              if ((lead.details.customFields != null &&
+                      lead.details.customFields!.isNotEmpty) ||
+                  (lead.createdByUserId != null &&
+                      lead.createdByUserId!.isNotEmpty) ||
+                  lead.source.platform.isNotEmpty)
+                _CustomFieldsSection(
+                  customFields: lead.details.customFields ?? {},
+                  createdByUserName: lead.createdByUserName,
+                  createdByUserId: lead.createdByUserId,
+                  source: lead.source.platform.isNotEmpty
+                      ? lead.source.platform
+                      : null,
+                ),
+              if ((lead.details.customFields != null &&
+                      lead.details.customFields!.isNotEmpty) ||
+                  (lead.createdByUserId != null &&
+                      lead.createdByUserId!.isNotEmpty) ||
+                  lead.source.platform.isNotEmpty)
                 const SizedBox(height: 8),
 
               // Activities Section with Filters
@@ -2567,22 +2565,57 @@ class _StageFormAccordionState extends State<_StageFormAccordion>
 /// Custom Fields Section Widget
 class _CustomFieldsSection extends StatelessWidget {
   final Map<String, dynamic> customFields;
+  final String? createdByUserName;
+  final String? createdByUserId;
+  final String? source;
 
-  const _CustomFieldsSection({required this.customFields});
+  const _CustomFieldsSection({
+    required this.customFields,
+    this.createdByUserName,
+    this.createdByUserId,
+    this.source,
+  });
 
   @override
   Widget build(BuildContext context) {
+    final items = <Widget>[];
+
+    // Add Created by field
+    if (createdByUserId != null && createdByUserId!.isNotEmpty) {
+      items.add(
+        _InfoRow(
+          Icons.person_add_outlined,
+          'Created by',
+          createdByUserName ?? createdByUserId ?? 'Unknown',
+        ),
+      );
+    }
+
+    // Add Source field
+    if (source != null && source!.isNotEmpty) {
+      items.add(
+        _InfoRow(
+          Icons.source_outlined,
+          'Source',
+          source!,
+        ),
+      );
+    }
+
+    // Add custom fields
+    items.addAll(
+      customFields.entries.map(
+        (entry) => _InfoRow(
+          Icons.label_outlined,
+          entry.key,
+          entry.value?.toString() ?? 'N/A',
+        ),
+      ),
+    );
+
     return _InfoSection(
       title: 'CUSTOM FIELDS',
-      items: customFields.entries
-          .map(
-            (entry) => _InfoRow(
-              Icons.label_outlined,
-              entry.key,
-              entry.value?.toString() ?? 'N/A',
-            ),
-          )
-          .toList(),
+      items: items,
     );
   }
 }
