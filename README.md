@@ -32,6 +32,7 @@ A comprehensive lead management platform with a Flutter mobile app, Angular web 
 ## Features
 
 ### Lead Management
+
 - ✅ Create, read, update, delete leads
 - ✅ Track lead source and campaign
 - ✅ Pipeline stage management
@@ -43,6 +44,7 @@ A comprehensive lead management platform with a Flutter mobile app, Angular web 
 - ✅ Notes and attachments
 
 ### Activity Tracking
+
 - ✅ Automatically log all lead changes
 - ✅ Display creator names in activity log
 - ✅ Stage transitions with "From → To" format
@@ -50,6 +52,7 @@ A comprehensive lead management platform with a Flutter mobile app, Angular web 
 - ✅ User-based activity filtering
 
 ### Core Improvements (Latest)
+
 - ✅ Lead creation with automatic assignment to creator
 - ✅ Creator tracking with `created_by_user_id` and `created_by_user_name`
 - ✅ Proper enum serialization in API responses
@@ -62,6 +65,7 @@ A comprehensive lead management platform with a Flutter mobile app, Angular web 
 ## Tech Stack
 
 ### Frontend (Flutter)
+
 - Flutter with Provider state management
 - Material Design UI
 - RESTful API integration
@@ -69,12 +73,14 @@ A comprehensive lead management platform with a Flutter mobile app, Angular web 
 - Speech-to-text capabilities
 
 ### Web Dashboard (Angular)
+
 - Angular 16+
 - TypeScript
 - RxJS for reactive programming
 - RESTful API integration
 
 ### Backend (Python)
+
 - FastAPI
 - SQLite JSON storage (file-based)
 - APScheduler for job scheduling
@@ -84,6 +90,7 @@ A comprehensive lead management platform with a Flutter mobile app, Angular web 
 ## Setup & Installation
 
 ### Backend Setup
+
 ```bash
 cd backend
 pip install -r requirements.txt
@@ -93,6 +100,7 @@ python main.py
 Server runs on `http://0.0.0.0:8000`
 
 ### Flutter Setup
+
 ```bash
 cd tss_leads
 flutter pub get
@@ -100,6 +108,7 @@ flutter run
 ```
 
 ### Angular Setup
+
 ```bash
 cd angular-app
 npm install
@@ -109,6 +118,7 @@ npm start
 ## API Endpoints
 
 ### Leads
+
 - `GET /api/leads` - List leads
 - `GET /api/leads/{lead_id}` - Get lead details
 - `POST /api/leads` - Create lead
@@ -116,10 +126,12 @@ npm start
 - `DELETE /api/leads/{lead_id}` - Delete lead
 
 ### Activities
+
 - `GET /api/leads/{lead_id}/activities` - Get lead activities
 - `POST /api/activities` - Log activity
 
 ### Followups
+
 - `GET /api/leads/{lead_id}/followups` - Get scheduled followups
 - `POST /api/leads/{lead_id}/followups` - Schedule followup
 - `DELETE /api/leads/{lead_id}/followups/{followup_id}` - Cancel followup
@@ -127,6 +139,7 @@ npm start
 ## Key Data Models
 
 ### Lead
+
 ```json
 {
   "id": "uuid",
@@ -144,6 +157,7 @@ npm start
 ```
 
 ### Activity
+
 ```json
 {
   "id": "uuid",
@@ -164,20 +178,24 @@ npm start
 ## Recent Fixes
 
 ### Creator Tracking
+
 - Added `created_by_user_id` field to Lead model
 - Backend looks up actual creator name via UserRepository
 - Flutter displays creator name in PROJECT DETAILS section
 
 ### Enum Serialization
+
 - Fixed backend to convert enums to string values in responses
 - `call_status`, `stage`, `source`, `status` now properly serialized
 
 ### Activity Display
+
 - Creator names show as "by [Name]" in activity timeline
 - Proper user name lookup for all activities
 - Activity pagination increased to 500 items
 
 ### Lead Detail View
+
 - Email field always visible (shows "No email" when empty)
 - Schedule followup button always accessible
 - Created by and Source info in PROJECT DETAILS
@@ -186,6 +204,7 @@ npm start
 ## Environment Setup
 
 Create `.env` file in backend directory:
+
 ```
 FIREBASE_PROJECT_ID=your_project_id
 FIREBASE_PRIVATE_KEY=your_private_key

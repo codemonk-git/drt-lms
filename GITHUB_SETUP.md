@@ -29,6 +29,7 @@ Replace `your_github_username` with your actual GitHub username.
    - Click "Create repository"
 
 2. **Push your code:**
+
    ```bash
    cd /Users/apple/dev/experiments/ang_exp
    git remote add origin https://github.com/YOUR_USERNAME/ang_exp.git
@@ -51,12 +52,14 @@ Replace `your_github_username` with your actual GitHub username.
 ## What's Included
 
 ### Core Code
+
 - ✅ Flutter mobile app (`tss_leads/`)
 - ✅ Angular web dashboard (`angular-app/`)
 - ✅ Python FastAPI backend (`backend/`)
 - ✅ Data files and documentation
 
 ### Documentation
+
 - ✅ `README.md` - Comprehensive project documentation
 - ✅ `push_to_github.sh` - Helper script for GitHub setup
 - ✅ `.gitignore` - Excludes build files, caches, etc.
@@ -115,6 +118,7 @@ Remote: origin -> https://github.com/YOUR_USERNAME/ang_exp.git
 ```
 
 To update these:
+
 ```bash
 git config user.name "Your Name"
 git config user.email "your.email@example.com"
@@ -123,18 +127,21 @@ git config user.email "your.email@example.com"
 ## Troubleshooting
 
 ### Remote already exists
+
 ```bash
 # Update existing remote
 git remote set-url origin https://github.com/YOUR_USERNAME/ang_exp.git
 ```
 
 ### Authentication issues
+
 ```bash
 # Use SSH instead of HTTPS
 git remote set-url origin git@github.com:YOUR_USERNAME/ang_exp.git
 ```
 
 ### Branch already exists
+
 ```bash
 # Force push
 git push -u origin main --force
@@ -162,6 +169,7 @@ After pushing, consider enabling:
 ## Support
 
 For questions about the setup process, refer to:
+
 - [GitHub Docs](https://docs.github.com)
 - [Git Book](https://git-scm.com/book/en/v2)
 - Official repository documentation in README.md

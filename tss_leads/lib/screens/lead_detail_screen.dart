@@ -817,7 +817,9 @@ class _LeadDetailScreenState extends State<LeadDetailScreen> {
                     _InfoRow(
                       Icons.person_add_outlined,
                       'Created by',
-                      lead.createdByUserName ?? lead.createdByUserId ?? 'Unknown',
+                      lead.createdByUserName ??
+                          lead.createdByUserId ??
+                          'Unknown',
                     ),
                   if (lead.source.platform.isNotEmpty)
                     _InfoRow(

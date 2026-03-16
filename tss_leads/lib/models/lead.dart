@@ -3,6 +3,20 @@ import 'package:intl/intl.dart';
 
 enum LeadStatus { active, archived, deleted }
 
+/// Helper function to extract string value from backend enum objects
+/// Backend may return enums as {_value_: "value", _name_: "NAME", ...}
+/// This extracts the _value_ field, or returns the original if it's already a string
+String _extractEnumValue(dynamic value, String defaultValue) {
+  if (value == null) return defaultValue;
+  if (value is String) return value;
+  if (value is Map<String, dynamic>) {
+    // Handle Python enum object: {_value_: "value", _name_: "NAME", ...}
+    final extracted = (value['_value_'] as String?) ?? defaultValue;
+    return extracted;
+  }
+  return defaultValue;
+}
+
 /// Helper function to parse datetime strings from backend
 /// Handles format with space instead of T: "2026-02-07 18:00:00.660000+00:00"
 /// Always converts UTC to local timezone for consistent display
@@ -282,7 +296,7 @@ class Lead {
         id: (json['id'] as String?) ?? 'unknown',
         accountId: json['account_id'] as String? ?? '',
         source: LeadSource(
-          platform: json['source'] as String? ?? 'other',
+          platform: _extractEnumValue(json['source'], 'other'),
           campaignId: json['campaign_id'] as String?,
         ),
         contact: ContactInfo(
@@ -304,10 +318,10 @@ class Lead {
           tags: (json['tags'] as List<dynamic>?)?.cast<String>(),
         ),
         stageId: json['stage_id'] as String? ?? json['stage'] as String? ?? '',
-        stageName: json['stage'] as String? ?? 'Unknown',
-        callStatus: json['call_status'] as String? ?? 'not_called',
+        stageName: _extractEnumValue(json['stage'], 'Unknown'),
+        callStatus: _extractEnumValue(json['call_status'], 'not_called'),
         status: LeadStatus.values.firstWhere(
-          (s) => s.name == (json['status'] as String? ?? 'active'),
+          (s) => s.name == (_extractEnumValue(json['status'], 'active')),
           orElse: () => LeadStatus.active,
         ),
         assignedTo: Assignment(
@@ -398,7 +412,9 @@ class Lead {
       callStatus: callStatus ?? this.callStatus,
       status: status ?? this.status,
       assignedTo: assignedTo ?? this.assignedTo,
-      createdByUserId: createdByUserId ?? this.createdByUserId,    createdByUserName: createdByUserName ?? this.createdByUserName,      nextFollowupDateTime: nextFollowupDateTime ?? this.nextFollowupDateTime,
+      createdByUserId: createdByUserId ?? this.createdByUserId,
+      createdByUserName: createdByUserName ?? this.createdByUserName,
+      nextFollowupDateTime: nextFollowupDateTime ?? this.nextFollowupDateTime,
       followupNotes: followupNotes ?? this.followupNotes,
       activities: activities ?? this.activities,
       createdAt: createdAt ?? this.createdAt,
