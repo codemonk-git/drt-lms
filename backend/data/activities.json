@@ -9711,6 +9711,24 @@
       },
       "ip_address": null,
       "user_agent": null
+    },
+    {
+      "id": "5791e196-b635-41b5-80dc-8092d9c68d65",
+      "created_at": "2026-03-16 09:51:50.611757",
+      "updated_at": "2026-03-16 09:51:50.611760",
+      "deleted_at": null,
+      "company_id": "cae14e43-1177-4de4-9c4c-fd647a69186b",
+      "user_id": "d9378bbb-97de-4d2b-a76b-2232e0e9b053",
+      "user_name": "Unknown",
+      "activity_type": "lead_created",
+      "entity_type": "lead",
+      "entity_id": "fe09df91-c725-4dea-bb66-c003e1304d3c",
+      "description": "Lead created from manual",
+      "metadata": {
+        "source": "manual"
+      },
+      "ip_address": null,
+      "user_agent": null
     }
   ]
 }

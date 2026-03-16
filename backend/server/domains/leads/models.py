@@ -164,9 +164,14 @@ class Lead(BaseModel):
             try:
                 from server.domains.users.repositories import UserRepository
                 user_repo = UserRepository()
-                user = user_repo.get_by_id(self.created_by_user_id)
-                if user and hasattr(user, 'name'):
-                    created_by_user_name = user.name if user.name else None
+                user = user_repo.get(self.created_by_user_id)
+                if user:
+                    # Try to get name from 'name' attribute, or construct from first_name/last_name
+                    if hasattr(user, 'name') and user.name:
+                        created_by_user_name = user.name
+                    elif hasattr(user, 'first_name') and user.first_name:
+                        last_name = getattr(user, 'last_name', '')
+                        created_by_user_name = f"{user.first_name} {last_name}".strip()
             except Exception:
                 pass
         
