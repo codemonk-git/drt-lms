@@ -2614,7 +2614,7 @@ class _CustomFieldsSection extends StatelessWidget {
     );
 
     return _InfoSection(
-      title: 'CUSTOM FIELDS',
+      title: 'ADDITIONAL INFO',
       items: items,
     );
   }
