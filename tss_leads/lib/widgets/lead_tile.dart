@@ -113,7 +113,11 @@ class LeadTile extends StatelessWidget {
               bottom: BorderSide(color: AppTheme.divider, width: 0.5),
             ),
           ),
-          child: Row(
+          child: Column(
+            children: [
+              // First Row: Avatar + Phone/Name/Details
+              Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               if (isSelectionMode)
                 Padding(
@@ -203,6 +207,7 @@ class LeadTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
                           child: Text(
@@ -215,8 +220,32 @@ class LeadTile extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),
-                        const SizedBox(width: 6),
-                        _SourceBadge(source: lead.source),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            _SourceBadge(source: lead.source),
+                            const SizedBox(width: 3),
+                            Consumer<LeadsProvider>(
+                              builder: (context, provider, _) {
+                                final assigneeName =
+                                    provider.getUserNameById(
+                                      lead.assignedTo.userId,
+                                    ) ??
+                                    lead.assignedTo.userId;
+                                return Text(
+                                  assigneeName,
+                                  style: const TextStyle(
+                                    fontSize: 10,
+                                    color: AppTheme.onSurfaceMuted,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                );
+                              },
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                     const SizedBox(height: 4),
@@ -238,29 +267,6 @@ class LeadTile extends StatelessWidget {
                               fontWeight: FontWeight.w500,
                             ),
                             overflow: TextOverflow.ellipsis,
-                          ),
-                        ),
-                        const SizedBox(width: 8),
-                        Expanded(
-                          flex: 2,
-                          child: Consumer<LeadsProvider>(
-                            builder: (context, provider, _) {
-                              final assigneeName =
-                                  provider.getUserNameById(
-                                    lead.assignedTo.userId,
-                                  ) ??
-                                  lead.assignedTo.userId;
-                              return Text(
-                                assigneeName,
-                                style: const TextStyle(
-                                  fontSize: 10,
-                                  color: AppTheme.onSurfaceMuted,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                              );
-                            },
                           ),
                         ),
                         const SizedBox(width: 8),
@@ -296,11 +302,28 @@ class LeadTile extends StatelessWidget {
                         _QuickActionButtons(lead: lead),
                       ],
                     ),
-                    const SizedBox(height: 4),
-                    // First note display
-                    _FirstNoteRow(leadId: lead.id),
                   ],
                 ),
+              ),
+            ],
+              ),
+              const SizedBox(height: 4),
+              // Second Row: Note spanning full width
+              Row(
+                children: [
+                  if (isSelectionMode)
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8),
+                      child: Checkbox(
+                        value: isSelected,
+                        onChanged: (_) => provider.toggleLeadSelection(lead.id),
+                        side: const BorderSide(color: AppTheme.primary, width: 1.5),
+                      ),
+                    ),
+                  Expanded(
+                    child: _FirstNoteRow(leadId: lead.id),
+                  ),
+                ],
               ),
             ],
           ),
@@ -316,22 +339,7 @@ class _SourceBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Icon(source.platformIcon, size: 10, color: AppTheme.onSurfaceMuted),
-        const SizedBox(width: 3),
-        Text(
-          source.platform.toUpperCase(),
-          style: const TextStyle(
-            fontSize: 9,
-            color: AppTheme.onSurfaceMuted,
-            fontWeight: FontWeight.w600,
-            letterSpacing: 0.3,
-          ),
-        ),
-      ],
-    );
+    return Icon(source.platformIcon, size: 10, color: AppTheme.onSurfaceMuted);
   }
 }
 

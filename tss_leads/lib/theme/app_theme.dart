@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   // Common Colors (Refined for Soft Light Palette)
-  static const Color primary = Color(0xFF818CF8);       // Indigo 400 (Softer)
-  static const Color primaryDark = Color(0xFF6366F1);   // Indigo 500
-  static const Color accent = Color(0xFF38BDF8);        // Sky 400
+  static const Color primary = Color(0xFF818CF8); // Indigo 400 (Softer)
+  static const Color primaryDark = Color(0xFF6366F1); // Indigo 500
+  static const Color accent = Color(0xFF38BDF8); // Sky 400
 
   // Current Palette (Switched to Neutral Light)
   static const Color surface = Color(0xFFFFFFFF);
   static const Color surfaceVariant = Color(0xFFF1F5F9); // Lighter gray
   static const Color cardBg = Color(0xFFFFFFFF);
-  static const Color sidebarBg = Color(0xFFF8FAFC);     // Near white
-  static const Color onSurface = Color(0xFF1E293B);     // Slate 800
+  static const Color sidebarBg = Color(0xFFF8FAFC); // Near white
+  static const Color onSurface = Color(0xFF1E293B); // Slate 800
   static const Color onSurfaceMuted = Color(0xFF64748B); // Slate 500
-  static const Color divider = Color(0xFFE2E8F0);       // Slate 200
+  static const Color divider = Color(0xFFE2E8F0); // Slate 200
 
   // Dark Palette (Keep for reference or dark mode support later)
   static const Color darkSurface = Color(0xFF1E1E2E);
@@ -61,7 +61,10 @@ class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: surfaceVariant,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 14,
+          vertical: 10,
+        ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide.none,
@@ -98,7 +101,9 @@ class AppTheme {
         style: ElevatedButton.styleFrom(
           backgroundColor: primary,
           foregroundColor: Colors.white,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
         ),
       ),
@@ -132,7 +137,10 @@ class AppTheme {
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: darkSurfaceVariant,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 14,
+          vertical: 10,
+        ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
           borderSide: BorderSide.none,
@@ -169,7 +177,9 @@ class AppTheme {
         style: ElevatedButton.styleFrom(
           backgroundColor: primary,
           foregroundColor: Colors.white,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
         ),
       ),

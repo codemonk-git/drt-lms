@@ -135,7 +135,7 @@ class _SidebarContent extends StatelessWidget {
     final provider = context.watch<LeadsProvider>();
     return Column(
       children: [
-        const SizedBox(height: 56),
+        const SizedBox(height: 16),
         // Logo
         Container(
           width: 50,

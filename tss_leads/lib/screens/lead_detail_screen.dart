@@ -58,8 +58,7 @@ class _LeadDetailScreenState extends State<LeadDetailScreen> {
   // Track previous stage to detect changes
   String? _previousStageId;
 
-  // Track if we've refreshed the lead data
-  bool _leadRefreshed = false;
+  bool _isRefreshing = false;
 
   @override
   void initState() {
@@ -70,10 +69,13 @@ class _LeadDetailScreenState extends State<LeadDetailScreen> {
     // They should already be loaded after login
     _syncStagesFromProvider();
 
-    // Force fresh lead data from API to ensure followups are current
+    // Refresh lead data from API in background without blocking UI
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      setState(() => _isRefreshing = true);
       context.read<LeadsProvider>().refreshLeadFromApi(widget.leadId).then((_) {
-        setState(() => _leadRefreshed = true);
+        if (mounted) {
+          setState(() => _isRefreshing = false);
+        }
       });
     });
 
@@ -434,8 +436,9 @@ class _LeadDetailScreenState extends State<LeadDetailScreen> {
     final leadsProvider = context.watch<LeadsProvider>();
     final lead = leadsProvider.getLeadById(widget.leadId);
 
-    // Don't show stale data - wait for fresh API data
-    if (!_leadRefreshed || lead == null) {
+    // Show lead immediately if available (from cache or provider)
+    // Refresh happens in background without blocking UI
+    if (lead == null) {
       return Scaffold(
         appBar: AppBar(title: const Text('Loading...')),
         body: const Center(child: CircularProgressIndicator()),
@@ -704,6 +707,7 @@ class _LeadDetailScreenState extends State<LeadDetailScreen> {
                   letterSpacing: 1.2,
                 ),
               ),
+              const SizedBox(height: 12),
               _CallStatusChips(
                 lead: lead,
                 onCallStatusChanged: _onCallStatusChanged,
@@ -962,7 +966,7 @@ class _CallStatusChips extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 36,
+      height: 32,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemCount: callStatuses.length,
@@ -984,22 +988,22 @@ class _CallStatusChips extends StatelessWidget {
             },
             child: AnimatedContainer(
               duration: const Duration(milliseconds: 200),
-              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
-                color: isSelected ? statusColor : AppTheme.surfaceVariant,
+                color: isSelected ? statusColor : Colors.transparent,
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                  color: isSelected ? statusColor : AppTheme.divider,
-                  width: 1,
+                  color: statusColor,
+                  width: 1.5,
                 ),
               ),
               child: Center(
                 child: Text(
                   _getDisplayLabel(status),
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: 11,
                     fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-                    color: isSelected ? Colors.white : AppTheme.onSurfaceMuted,
+                    color: isSelected ? Colors.white : statusColor,
                   ),
                 ),
               ),
@@ -1030,18 +1034,18 @@ class _PipelineChips extends StatelessWidget {
   Widget build(BuildContext context) {
     if (stages.isEmpty) {
       return const SizedBox(
-        height: 36,
+        height: 32,
         child: Center(
           child: Text(
             'Loading stages...',
-            style: TextStyle(fontSize: 12, color: AppTheme.onSurfaceMuted),
+            style: TextStyle(fontSize: 11, color: AppTheme.onSurfaceMuted),
           ),
         ),
       );
     }
 
     return SizedBox(
-      height: 36,
+      height: 32,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemCount: stages.length,
@@ -1072,22 +1076,22 @@ class _PipelineChips extends StatelessWidget {
             },
             child: AnimatedContainer(
               duration: const Duration(milliseconds: 200),
-              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
-                color: isSelected ? stageColor : AppTheme.surfaceVariant,
+                color: isSelected ? stageColor : Colors.transparent,
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
-                  color: isSelected ? stageColor : AppTheme.divider,
-                  width: 1,
+                  color: stageColor,
+                  width: 1.5,
                 ),
               ),
               child: Center(
                 child: Text(
                   stage.name,
                   style: TextStyle(
-                    fontSize: 12,
+                    fontSize: 11,
                     fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-                    color: isSelected ? Colors.white : AppTheme.onSurfaceMuted,
+                    color: isSelected ? Colors.white : stageColor,
                   ),
                 ),
               ),

@@ -9765,6 +9765,25 @@
       },
       "ip_address": null,
       "user_agent": null
+    },
+    {
+      "id": "1f9374ba-af33-4c0d-a3e8-df7f2778573b",
+      "created_at": "2026-03-16 11:07:22.530853",
+      "updated_at": "2026-03-16 11:07:22.530864",
+      "deleted_at": null,
+      "company_id": null,
+      "user_id": "system",
+      "user_name": "System",
+      "activity_type": "lead_call_status_changed",
+      "entity_type": "lead",
+      "entity_id": "7ea79af1-6f56-4d33-84c8-db2cb42051e6",
+      "description": "Call status changed to not_picked",
+      "metadata": {
+        "old_call_status": "picked",
+        "new_call_status": "not_picked"
+      },
+      "ip_address": null,
+      "user_agent": null
     }
   ]
 }
