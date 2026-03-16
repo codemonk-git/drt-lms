@@ -9729,6 +9729,24 @@
       },
       "ip_address": null,
       "user_agent": null
+    },
+    {
+      "id": "65284989-a718-4544-9e4d-c8988fb208e3",
+      "created_at": "2026-03-16 10:36:33.393315",
+      "updated_at": "2026-03-16 10:36:33.393318",
+      "deleted_at": null,
+      "company_id": "401f0ffc-6c34-4310-8970-5313fe84f721",
+      "user_id": "system",
+      "user_name": "System",
+      "activity_type": "followup_scheduled",
+      "entity_type": "lead",
+      "entity_id": "d26c8424-6e46-4e64-a32d-664241bf1c7c",
+      "description": "Followup scheduled for 2026-03-17T08:30:00.000Z",
+      "metadata": {
+        "scheduled_for": "2026-03-17T08:30:00.000Z"
+      },
+      "ip_address": null,
+      "user_agent": null
     }
   ]
 }

@@ -719,7 +719,7 @@ class _TasksViewState extends State<_TasksView> {
       }
 
       try {
-        final scheduledFor = DateTime.parse(lead.nextFollowupDateTime!);
+        final scheduledFor = parseDateTime(lead.nextFollowupDateTime!);
         final scheduledDate = DateTime(
           scheduledFor.year,
           scheduledFor.month,
@@ -759,7 +759,7 @@ class _TasksViewState extends State<_TasksView> {
       }
 
       try {
-        final scheduledFor = DateTime.parse(lead.nextFollowupDateTime!);
+        final scheduledFor = parseDateTime(lead.nextFollowupDateTime!);
         final followupDate = DateTime(
           scheduledFor.year,
           scheduledFor.month,

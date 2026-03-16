@@ -1406,7 +1406,7 @@ class _FollowupsSection extends StatelessWidget {
     }
 
     try {
-      final scheduledFor = DateTime.parse(lead.nextFollowupDateTime!);
+      final scheduledFor = parseDateTime(lead.nextFollowupDateTime!);
       final now = DateTime.now();
       final today = DateTime(now.year, now.month, now.day);
       final followupDay = DateTime(
