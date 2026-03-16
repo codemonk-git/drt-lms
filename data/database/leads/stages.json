@@ -1,0 +1,309 @@
+{
+  "stages": [
+    {
+      "id": "574ae1e5-50d4-4e6a-b746-d10a0516d080",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "name": "nqw",
+      "description": "New prospects and inquiries",
+      "order": 0,
+      "color": "#3b82f6",
+      "is_default": true,
+      "is_final": false,
+      "is_active": true,
+      "lead_count": 2,
+      "created_at": "2026-01-31T12:28:44Z",
+      "updated_at": "2026-01-31T12:28:44Z",
+      "handler": {
+        "role": "Sales Representative",
+        "assigned_to_user_ids": ["user-003"],
+        "assigned_to_names": ["Mike Sales Rep"],
+        "auto_reassign": true,
+        "instructions": "Qualify leads on budget, timeline, and needs. Fill Initial Qualification form."
+      },
+      "required_forms": [
+        {
+          "form_id": "92f72bde-f1c1-4d1f-94ab-0ceea07f0a91",
+          "form_name": "Initial Qualification",
+          "is_required": true,
+          "order": 0
+        }
+      ],
+      "optional_forms": [],
+      "next_stages": ["578fdf36-3059-4b0a-9ce0-5d99c0c06803"]
+    },
+    {
+      "id": "578fdf36-3059-4b0a-9ce0-5d99c0c06803",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "name": "qe",
+      "description": "Qualified leads ready for engagement",
+      "order": 1,
+      "color": "#10b981",
+      "is_default": false,
+      "is_final": false,
+      "is_active": true,
+      "lead_count": 2,
+      "created_at": "2026-01-31T12:37:13Z",
+      "updated_at": "2026-01-31T12:37:13Z",
+      "handler": {
+        "role": "Manager",
+        "assigned_to_user_ids": ["user-002"],
+        "assigned_to_names": ["Sarah Sales Manager"],
+        "auto_reassign": true,
+        "instructions": "Schedule demo, prepare presentation. Fill Demo Request form."
+      },
+      "required_forms": [
+        {
+          "form_id": "8893eede-3231-4e30-8ab4-08c74bcb9ce6",
+          "form_name": "Demo Request",
+          "is_required": true,
+          "order": 0
+        }
+      ],
+      "optional_forms": [
+        {
+          "form_id": "92f72bde-f1c1-4d1f-94ab-0ceea07f0a91",
+          "form_name": "Initial Qualification",
+          "is_required": false,
+          "order": 1
+        }
+      ],
+      "next_stages": ["stage-003", "stage-006"]
+    },
+    {
+      "id": "stage-003",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "name": "Proposal",
+      "description": "Proposals sent, awaiting response",
+      "order": 2,
+      "color": "#f59e0b",
+      "is_default": false,
+      "is_final": false,
+      "is_active": true,
+      "lead_count": 0,
+      "created_at": "2026-01-31T13:00:00Z",
+      "updated_at": "2026-01-31T13:00:00Z",
+      "handler": {
+        "role": "Quotation Specialist",
+        "assigned_to_user_ids": ["user-004"],
+        "assigned_to_names": ["Emma Support"],
+        "auto_reassign": true,
+        "instructions": "Create quotation, fill Proposal Review form, send to client."
+      },
+      "required_forms": [
+        {
+          "form_id": "form-003",
+          "form_name": "Proposal Review",
+          "is_required": true,
+          "order": 0
+        }
+      ],
+      "optional_forms": [],
+      "next_stages": ["stage-004", "stage-006"]
+    },
+    {
+      "id": "stage-004",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "name": "Negotiation",
+      "description": "Terms under discussion",
+      "order": 3,
+      "color": "#8b5cf6",
+      "is_default": false,
+      "is_final": false,
+      "is_active": true,
+      "lead_count": 0,
+      "created_at": "2026-01-31T13:15:00Z",
+      "updated_at": "2026-01-31T13:15:00Z",
+      "handler": {
+        "role": "Sales Manager",
+        "assigned_to_user_ids": ["user-002"],
+        "assigned_to_names": ["Sarah Sales Manager"],
+        "auto_reassign": true,
+        "instructions": "Negotiate terms, manage revisions, close deal."
+      },
+      "required_forms": [],
+      "optional_forms": [],
+      "next_stages": ["stage-005", "stage-006"]
+    },
+    {
+      "id": "stage-005",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "name": "Closed Won",
+      "description": "Successfully closed deals",
+      "order": 4,
+      "color": "#22c55e",
+      "is_default": false,
+      "is_final": true,
+      "is_active": true,
+      "lead_count": 0,
+      "created_at": "2026-01-31T13:30:00Z",
+      "updated_at": "2026-01-31T13:30:00Z",
+      "handler": {
+        "role": "Manager",
+        "assigned_to_user_ids": ["user-002"],
+        "assigned_to_names": ["Sarah Sales Manager"],
+        "auto_reassign": false,
+        "instructions": "Ensure onboarding complete, schedule success review."
+      },
+      "required_forms": [],
+      "optional_forms": [],
+      "next_stages": []
+    },
+    {
+      "id": "stage-006",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "name": "Closed Lost",
+      "description": "Lost deals and disqualified leads",
+      "order": 5,
+      "color": "#ef4444",
+      "is_default": false,
+      "is_final": true,
+      "is_active": true,
+      "lead_count": 0,
+      "created_at": "2026-01-31T13:45:00Z",
+      "updated_at": "2026-01-31T13:45:00Z",
+      "handler": {
+        "role": "Manager",
+        "assigned_to_user_ids": ["user-001"],
+        "assigned_to_names": ["John Administrator"],
+        "auto_reassign": false,
+        "instructions": "Document loss reason, schedule follow-up for future opportunity."
+      },
+      "required_forms": [],
+      "optional_forms": [],
+      "next_stages": []
+    },
+    {
+      "id": "91a880b2-e47c-4264-b75b-39dab471fa2f",
+      "company_id": "401f0ffc-6c34-4310-8970-5313fe84f721",
+      "name": "New",
+      "description": "New leads and prospects",
+      "order": 0,
+      "color": "#3b82f6",
+      "is_default": true,
+      "is_final": false,
+      "is_active": true,
+      "lead_count": 1,
+      "created_at": "2026-02-25T09:00:00Z",
+      "updated_at": "2026-02-25T09:00:00Z",
+      "handler": {
+        "role": "Sales Representative",
+        "assigned_to_user_ids": ["bd735d58-bc4d-4cf6-9c50-4b782e89d246"],
+        "assigned_to_names": ["Sales Rep"],
+        "auto_reassign": true,
+        "instructions": "Review and categorize new leads"
+      },
+      "required_forms": [],
+      "optional_forms": [],
+      "next_stages": ["7f2c5d1f-3a4b-4c2e-8e7a-6d5c4b3a2f1e"]
+    },
+    {
+      "id": "7f2c5d1f-3a4b-4c2e-8e7a-6d5c4b3a2f1e",
+      "company_id": "401f0ffc-6c34-4310-8970-5313fe84f721",
+      "name": "Engaged",
+      "description": "Leads actively engaged",
+      "order": 1,
+      "color": "#10b981",
+      "is_default": false,
+      "is_final": false,
+      "is_active": true,
+      "lead_count": 0,
+      "created_at": "2026-02-25T09:00:00Z",
+      "updated_at": "2026-02-25T09:00:00Z",
+      "handler": {
+        "role": "Account Manager",
+        "assigned_to_user_ids": ["bd735d58-bc4d-4cf6-9c50-4b782e89d246"],
+        "assigned_to_names": ["Account Manager"],
+        "auto_reassign": true,
+        "instructions": "Nurture and develop lead relationship"
+      },
+      "required_forms": [],
+      "optional_forms": [],
+      "next_stages": ["8c3d6e2f-4b5c-5d3e-9f8a-7e6d5c4b3a2f"]
+    },
+    {
+      "id": "8c3d6e2f-4b5c-5d3e-9f8a-7e6d5c4b3a2f",
+      "company_id": "401f0ffc-6c34-4310-8970-5313fe84f721",
+      "name": "Qualified",
+      "description": "Qualified leads ready for proposal",
+      "order": 2,
+      "color": "#f59e0b",
+      "is_default": false,
+      "is_final": false,
+      "is_active": true,
+      "lead_count": 0,
+      "created_at": "2026-02-25T09:00:00Z",
+      "updated_at": "2026-02-25T09:00:00Z",
+      "handler": {
+        "role": "Sales Manager",
+        "assigned_to_user_ids": ["bd735d58-bc4d-4cf6-9c50-4b782e89d246"],
+        "assigned_to_names": ["Sales Manager"],
+        "auto_reassign": true,
+        "instructions": "Prepare and send proposal"
+      },
+      "required_forms": [],
+      "optional_forms": [],
+      "next_stages": [
+        "9d4e7f3f-5c6d-6e4f-0a9b-8f7e6d5c4b3a",
+        "3e5f8g4f-6d7e-7f5f-1b0c-9g8f7e6d5c4b"
+      ]
+    },
+    {
+      "id": "9d4e7f3f-5c6d-6e4f-0a9b-8f7e6d5c4b3a",
+      "company_id": "401f0ffc-6c34-4310-8970-5313fe84f721",
+      "name": "Won",
+      "description": "Successfully closed deals",
+      "order": 3,
+      "color": "#22c55e",
+      "is_default": false,
+      "is_final": true,
+      "is_active": true,
+      "lead_count": 0,
+      "created_at": "2026-02-25T09:00:00Z",
+      "updated_at": "2026-02-25T09:00:00Z",
+      "handler": {
+        "role": "Account Manager",
+        "assigned_to_user_ids": ["bd735d58-bc4d-4cf6-9c50-4b782e89d246"],
+        "assigned_to_names": ["Account Manager"],
+        "auto_reassign": false,
+        "instructions": "Onboard and manage customer"
+      },
+      "required_forms": [],
+      "optional_forms": [],
+      "next_stages": []
+    },
+    {
+      "id": "3e5f8g4f-6d7e-7f5f-1b0c-9g8f7e6d5c4b",
+      "company_id": "401f0ffc-6c34-4310-8970-5313fe84f721",
+      "name": "Lost",
+      "description": "Lost deals and disqualified leads",
+      "order": 4,
+      "color": "#ef4444",
+      "is_default": false,
+      "is_final": true,
+      "is_active": true,
+      "lead_count": 0,
+      "created_at": "2026-02-25T09:00:00Z",
+      "updated_at": "2026-02-25T09:00:00Z",
+      "handler": {
+        "role": "Manager",
+        "assigned_to_user_ids": ["bd735d58-bc4d-4cf6-9c50-4b782e89d246"],
+        "assigned_to_names": ["Manager"],
+        "auto_reassign": false,
+        "instructions": "Document loss reason and follow up"
+      },
+      "required_forms": [],
+      "optional_forms": [],
+      "next_stages": []
+    }
+  ],
+  "metadata": {
+    "version": "2.0",
+    "consolidated_from": [
+      "stages.json (original)",
+      "stage_handlers.json (merged)",
+      "stage_form_assignments.json (merged)"
+    ],
+    "last_updated": "2026-02-25T12:00:00Z",
+    "total_stages": 11
+  }
+}

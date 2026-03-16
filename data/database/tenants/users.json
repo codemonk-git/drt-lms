@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "id": "user-001",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "first_name": "John",
+      "last_name": "Administrator",
+      "email": "john.admin@acmecorp.com",
+      "phone": "+1-800-555-0123",
+      "role_id": "role-admin",
+      "role_name": "Admin",
+      "status": "active",
+      "created_at": "2026-01-15T10:30:00Z",
+      "updated_at": "2026-01-31T15:45:00Z"
+    },
+    {
+      "id": "user-002",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "first_name": "Sarah",
+      "last_name": "Sales Manager",
+      "email": "sarah.sales@acmecorp.com",
+      "phone": "+1-800-555-0124",
+      "role_id": "role-manager",
+      "role_name": "Manager",
+      "status": "active",
+      "created_at": "2026-01-20T09:00:00Z",
+      "updated_at": "2026-01-31T10:15:00Z"
+    },
+    {
+      "id": "user-003",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "first_name": "Mike",
+      "last_name": "Sales Rep",
+      "email": "mike.rep@acmecorp.com",
+      "phone": "+1-800-555-0125",
+      "role_id": "role-user",
+      "role_name": "Sales Representative",
+      "status": "active",
+      "created_at": "2026-01-22T11:30:00Z",
+      "updated_at": "2026-01-31T14:20:00Z"
+    },
+    {
+      "id": "user-004",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "first_name": "Emma",
+      "last_name": "Support",
+      "email": "emma.support@acmecorp.com",
+      "phone": "+1-800-555-0126",
+      "role_id": "role-support",
+      "role_name": "Support Agent",
+      "status": "active",
+      "created_at": "2026-01-25T08:45:00Z",
+      "updated_at": "2026-02-01T09:30:00Z"
+    }
+  ],
+  "roles": [
+    {
+      "id": "role-admin",
+      "name": "Admin",
+      "description": "Full system access",
+      "permissions": [
+        "leads.create",
+        "leads.read",
+        "leads.update",
+        "leads.delete",
+        "users.manage",
+        "settings.manage",
+        "reports.view",
+        "teams.manage",
+        "forms.manage",
+        "stages.manage"
+      ]
+    },
+    {
+      "id": "role-manager",
+      "name": "Manager",
+      "description": "Team and lead management",
+      "permissions": [
+        "leads.create",
+        "leads.read",
+        "leads.update",
+        "users.view",
+        "reports.view",
+        "teams.view",
+        "forms.view",
+        "stages.view"
+      ]
+    },
+    {
+      "id": "role-user",
+      "name": "Sales Representative",
+      "description": "Can manage own leads and assigned leads",
+      "permissions": [
+        "leads.create",
+        "leads.read",
+        "leads.update",
+        "reports.view_own",
+        "forms.view"
+      ]
+    },
+    {
+      "id": "role-support",
+      "name": "Support Agent",
+      "description": "Can view and update leads assigned to them",
+      "permissions": ["leads.read", "leads.update", "forms.view"]
+    }
+  ]
+}

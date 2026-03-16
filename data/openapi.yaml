@@ -1,0 +1,661 @@
+openapi: 3.0.0
+info:
+  title: Lead Ingestion API
+  description: Comprehensive lead management and ingestion system API
+  version: 1.0.0
+  contact:
+    name: Lead Management Team
+    email: api-support@example.com
+  license:
+    name: Apache 2.0
+
+servers:
+  - url: https://api.example.com/v1
+    description: Production server
+  - url: https://staging-api.example.com/v1
+    description: Staging server
+  - url: http://localhost:3000/api/v1
+    description: Development server
+
+tags:
+  - name: Leads
+    description: Lead management and creation
+  - name: Ingestion
+    description: Lead ingestion workflow
+  - name: Forms
+    description: Form templates and submissions
+  - name: Assignments
+    description: Lead assignments and routing
+  - name: SLA
+    description: SLA tracking and monitoring
+  - name: Activities
+    description: Activity logs and audit trail
+
+paths:
+  /leads:
+    post:
+      summary: Create a new lead
+      description: Ingest a new lead into the system with validation and routing
+      tags:
+        - Leads
+      operationId: createLead
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LeadCreateRequest"
+      responses:
+        "201":
+          description: Lead created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Lead"
+        "400":
+          description: Invalid request body
+        "401":
+          description: Unauthorized
+        "429":
+          description: Rate limit exceeded
+
+    get:
+      summary: List all leads
+      description: Retrieve all leads for a company with optional filtering
+      tags:
+        - Leads
+      operationId: listLeads
+      parameters:
+        - name: company_id
+          in: query
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Company ID filter
+        - name: stage_id
+          in: query
+          schema:
+            type: string
+            format: uuid
+          description: Filter by pipeline stage
+        - name: source_id
+          in: query
+          schema:
+            type: string
+            format: uuid
+          description: Filter by lead source
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [new, engaged, qualified, lost, won]
+          description: Filter by lead status
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 50
+            maximum: 200
+          description: Number of results per page
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            default: 0
+          description: Pagination offset
+      responses:
+        "200":
+          description: List of leads
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Lead"
+                  total:
+                    type: integer
+                  limit:
+                    type: integer
+                  offset:
+                    type: integer
+        "401":
+          description: Unauthorized
+
+  /leads/{lead_id}:
+    get:
+      summary: Get lead details
+      description: Retrieve complete details for a specific lead
+      tags:
+        - Leads
+      operationId: getLead
+      parameters:
+        - name: lead_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+          description: Lead ID
+      responses:
+        "200":
+          description: Lead details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Lead"
+        "404":
+          description: Lead not found
+        "401":
+          description: Unauthorized
+
+    patch:
+      summary: Update lead
+      description: Update lead information and metadata
+      tags:
+        - Leads
+      operationId: updateLead
+      parameters:
+        - name: lead_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LeadUpdateRequest"
+      responses:
+        "200":
+          description: Lead updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Lead"
+        "404":
+          description: Lead not found
+        "409":
+          description: Conflict (stage transition not allowed)
+
+  /leads/{lead_id}/change-stage:
+    post:
+      summary: Move lead to next stage
+      description: Transition lead to a new stage in the pipeline
+      tags:
+        - Leads
+      operationId: changeLeadStage
+      parameters:
+        - name: lead_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                stage_id:
+                  type: string
+                  format: uuid
+                reason:
+                  type: string
+                  description: Reason for stage change
+              required:
+                - stage_id
+      responses:
+        "200":
+          description: Stage changed successfully
+        "409":
+          description: Stage transition not allowed
+        "404":
+          description: Lead or stage not found
+
+  /ingestion/process:
+    post:
+      summary: Process lead ingestion
+      description: Execute the complete lead ingestion pipeline with routing and assignment
+      tags:
+        - Ingestion
+      operationId: processIngestion
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/IngestionRequest"
+      responses:
+        "202":
+          description: Ingestion accepted and processing
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ingestion_id:
+                    type: string
+                    format: uuid
+                  status:
+                    type: string
+                    enum: [processing, completed, failed]
+                  created_at:
+                    type: string
+                    format: date-time
+        "400":
+          description: Invalid ingestion request
+        "422":
+          description: Unprocessable entity (validation failed)
+
+  /ingestion/{ingestion_id}:
+    get:
+      summary: Get ingestion status
+      description: Check status and logs of an ingestion process
+      tags:
+        - Ingestion
+      operationId: getIngestionStatus
+      parameters:
+        - name: ingestion_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        "200":
+          description: Ingestion status details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/IngestionStatus"
+        "404":
+          description: Ingestion not found
+
+  /forms/{form_id}/submit:
+    post:
+      summary: Submit form response
+      description: Submit form response data for a lead
+      tags:
+        - Forms
+      operationId: submitForm
+      parameters:
+        - name: form_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                lead_id:
+                  type: string
+                  format: uuid
+                responses:
+                  type: object
+                  description: Form field responses
+              required:
+                - lead_id
+                - responses
+      responses:
+        "201":
+          description: Form submission created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FormSubmission"
+        "400":
+          description: Invalid form submission
+        "404":
+          description: Form or lead not found
+
+  /assignments/{lead_id}:
+    get:
+      summary: Get lead assignment
+      description: Retrieve current assignment for a lead
+      tags:
+        - Assignments
+      operationId: getAssignment
+      parameters:
+        - name: lead_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        "200":
+          description: Assignment details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Assignment"
+        "404":
+          description: Assignment not found
+
+    post:
+      summary: Reassign lead
+      description: Manually assign or reassign a lead to a team member
+      tags:
+        - Assignments
+      operationId: reassignLead
+      parameters:
+        - name: lead_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: string
+                  format: uuid
+                reason:
+                  type: string
+              required:
+                - user_id
+      responses:
+        "200":
+          description: Lead reassigned successfully
+        "400":
+          description: Invalid assignment
+        "404":
+          description: Lead or user not found
+
+  /sla/{lead_id}:
+    get:
+      summary: Get SLA status
+      description: Check SLA deadlines and breach status for a lead
+      tags:
+        - SLA
+      operationId: getSLAStatus
+      parameters:
+        - name: lead_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        "200":
+          description: SLA status details
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SLAStatus"
+        "404":
+          description: Lead not found
+
+  /activities/{lead_id}:
+    get:
+      summary: Get lead activity log
+      description: Retrieve complete activity and audit trail for a lead
+      tags:
+        - Activities
+      operationId: getActivityLog
+      parameters:
+        - name: lead_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 50
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            default: 0
+      responses:
+        "200":
+          description: Activity log
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Activity"
+        "404":
+          description: Lead not found
+
+components:
+  schemas:
+    Lead:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        company_id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+        source_id:
+          type: string
+          format: uuid
+        stage_id:
+          type: string
+          format: uuid
+        score:
+          type: integer
+          minimum: 0
+          maximum: 100
+        status:
+          type: string
+          enum: [new, engaged, qualified, lost, won]
+        metadata:
+          type: object
+          additionalProperties: true
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+
+    LeadCreateRequest:
+      type: object
+      properties:
+        company_id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+        source_id:
+          type: string
+          format: uuid
+        metadata:
+          type: object
+          additionalProperties: true
+      required:
+        - company_id
+        - name
+        - email
+        - source_id
+
+    LeadUpdateRequest:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+        metadata:
+          type: object
+
+    IngestionRequest:
+      type: object
+      properties:
+        company_id:
+          type: string
+          format: uuid
+        source_id:
+          type: string
+          format: uuid
+        leads:
+          type: array
+          items:
+            $ref: "#/components/schemas/LeadCreateRequest"
+        deduplication_strategy:
+          type: string
+          enum: [strict, fuzzy, none]
+        auto_assign:
+          type: boolean
+          default: true
+      required:
+        - company_id
+        - source_id
+        - leads
+
+    IngestionStatus:
+      type: object
+      properties:
+        ingestion_id:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [processing, completed, failed]
+        total_leads:
+          type: integer
+        processed_leads:
+          type: integer
+        failed_leads:
+          type: integer
+        logs:
+          type: array
+          items:
+            type: object
+
+    FormSubmission:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        form_id:
+          type: string
+          format: uuid
+        lead_id:
+          type: string
+          format: uuid
+        responses:
+          type: object
+        submitted_at:
+          type: string
+          format: date-time
+
+    Assignment:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        lead_id:
+          type: string
+          format: uuid
+        user_id:
+          type: string
+          format: uuid
+        assigned_at:
+          type: string
+          format: date-time
+        reassigned_at:
+          type: string
+          format: date-time
+
+    SLAStatus:
+      type: object
+      properties:
+        lead_id:
+          type: string
+          format: uuid
+        first_response_deadline:
+          type: string
+          format: date-time
+        resolution_deadline:
+          type: string
+          format: date-time
+        response_breach:
+          type: boolean
+        resolution_breach:
+          type: boolean
+        breach_status:
+          type: string
+          enum: [on_track, at_risk, breached]
+
+    Activity:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        lead_id:
+          type: string
+          format: uuid
+        type:
+          type: string
+          enum:
+            - lead_created
+            - lead_updated
+            - stage_changed
+            - assigned
+            - reassigned
+            - form_submitted
+            - activity_logged
+        user_id:
+          type: string
+          format: uuid
+        description:
+          type: string
+        metadata:
+          type: object
+        created_at:
+          type: string
+          format: date-time
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Bearer token for API authentication
+
+security:
+  - bearerAuth: []

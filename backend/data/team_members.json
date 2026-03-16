@@ -1,0 +1,180 @@
+{
+  "team_members": [
+    {
+      "id": "fcaeef7d-6561-4105-89df-3fcf63dd3a73",
+      "created_at": "2026-02-01T16:58:43.009986",
+      "updated_at": "2026-02-01T16:58:43.010005",
+      "deleted_at": null,
+      "team_id": "d1fb7779-fdd0-456f-9fcf-1341cc82ffbb",
+      "user_id": "99d5dafc-09de-4473-b873-42c66e770be8",
+      "role": "member",
+      "joined_at": "2026-02-01T16:58:43.010027",
+      "added_by": null
+    },
+    {
+      "id": "426bb78b-975c-4e70-bd3b-7c61a4516881",
+      "created_at": "2026-02-02T05:59:12.569513",
+      "updated_at": "2026-02-02T05:59:12.569530",
+      "deleted_at": null,
+      "team_id": "4221dfb1-c6db-44ee-859b-9a52cf131350",
+      "user_id": "0eb5a970-64db-40ff-bb15-9424bc003e4b",
+      "role": "member",
+      "joined_at": "2026-02-02T05:59:12.569542",
+      "added_by": null
+    },
+    {
+      "id": "1f9e3372-f39e-4d48-a645-91943a058b53",
+      "created_at": "2026-02-02T05:59:15.951648",
+      "updated_at": "2026-02-02T05:59:15.951660",
+      "deleted_at": null,
+      "team_id": "4221dfb1-c6db-44ee-859b-9a52cf131350",
+      "user_id": "724ee166-30a8-41f5-9817-55d326a7b12e",
+      "role": "member",
+      "joined_at": "2026-02-02T05:59:15.951668",
+      "added_by": null
+    },
+    {
+      "id": "5adef0f2-d907-4440-b563-47bcf9c8c310",
+      "created_at": "2026-02-02T05:59:57.549286",
+      "updated_at": "2026-02-02T05:59:57.549297",
+      "deleted_at": null,
+      "team_id": "9e3271ee-4058-46b6-a03c-7db753144f9c",
+      "user_id": "0eb5a970-64db-40ff-bb15-9424bc003e4b",
+      "role": "member",
+      "joined_at": "2026-02-02T05:59:57.549305",
+      "added_by": null
+    },
+    {
+      "id": "955ed170-4aca-495e-b82a-7e9848ea9552",
+      "created_at": "2026-02-02T10:47:24.874677",
+      "updated_at": "2026-02-02T10:47:24.874679",
+      "deleted_at": null,
+      "team_id": "2c766756-0f53-40d4-92a3-6a6caed35dbd",
+      "user_id": "0eb5a970-64db-40ff-bb15-9424bc003e4b",
+      "role": "member",
+      "joined_at": "2026-02-02T10:47:24.874682",
+      "added_by": null
+    },
+    {
+      "id": "d0ac5864-1ff5-41b0-b422-873ea7e3c9a3",
+      "created_at": "2026-02-03T11:22:54.991785",
+      "updated_at": "2026-02-03T11:22:54.991787",
+      "deleted_at": null,
+      "team_id": "2c766756-0f53-40d4-92a3-6a6caed35dbd",
+      "user_id": "4105489a-9a59-4054-8279-81d87179835e",
+      "role": "member",
+      "joined_at": "2026-02-03T11:22:54.991790",
+      "added_by": null
+    },
+    {
+      "id": "6d88af1b-e57c-4e42-9428-71aefb03bdf6",
+      "created_at": "2026-02-03T11:23:02.202222",
+      "updated_at": "2026-02-03T11:23:02.202224",
+      "deleted_at": null,
+      "team_id": "2c766756-0f53-40d4-92a3-6a6caed35dbd",
+      "user_id": "724ee166-30a8-41f5-9817-55d326a7b12e",
+      "role": "member",
+      "joined_at": "2026-02-03T11:23:02.202226",
+      "added_by": null
+    },
+    {
+      "id": "059462a9-00eb-426a-9875-edd619177703",
+      "created_at": "2026-02-03T18:50:18.533084",
+      "updated_at": "2026-02-03T18:50:18.533086",
+      "deleted_at": null,
+      "team_id": "4221dfb1-c6db-44ee-859b-9a52cf131350",
+      "user_id": "0bed59f0-adc7-40ef-8f51-6659575d6736",
+      "role": "member",
+      "joined_at": "2026-02-03T18:50:18.533088",
+      "added_by": null
+    },
+    {
+      "id": "7e2e8288-1e6a-40c4-a9c8-bd291035fe55",
+      "created_at": "2026-02-03T18:53:27.526723",
+      "updated_at": "2026-02-03T18:53:27.526725",
+      "deleted_at": null,
+      "team_id": "2c766756-0f53-40d4-92a3-6a6caed35dbd",
+      "user_id": "0bed59f0-adc7-40ef-8f51-6659575d6736",
+      "role": "member",
+      "joined_at": "2026-02-03T18:53:27.526728",
+      "added_by": null
+    },
+    {
+      "id": "5a20258e-da9b-4899-9e6e-64cca1918f4b",
+      "created_at": "2026-02-25T09:33:33.535742",
+      "updated_at": "2026-02-25T09:33:33.535745",
+      "deleted_at": null,
+      "team_id": "89271ff3-5600-4617-b7f7-54a629a6c250",
+      "user_id": "d9378bbb-97de-4d2b-a76b-2232e0e9b053",
+      "role": "member",
+      "joined_at": "2026-02-25T09:33:33.535747",
+      "added_by": null
+    },
+    {
+      "id": "6ddc239b-68eb-47b0-ba81-24dbc56a7ace",
+      "created_at": "2026-02-25T09:33:44.618592",
+      "updated_at": "2026-02-25T09:33:44.618593",
+      "deleted_at": null,
+      "team_id": "89271ff3-5600-4617-b7f7-54a629a6c250",
+      "user_id": "dad42b22-08cb-4fd5-8fcc-a487a6a9adda",
+      "role": "member",
+      "joined_at": "2026-02-25T09:33:44.618595",
+      "added_by": null
+    },
+    {
+      "id": "5bdcae76-2c19-42fa-800f-190af6f9e1a0",
+      "created_at": "2026-02-25T09:33:52.010649",
+      "updated_at": "2026-02-25T09:33:52.010651",
+      "deleted_at": null,
+      "team_id": "89271ff3-5600-4617-b7f7-54a629a6c250",
+      "user_id": "126345e5-21e4-4b58-9c3e-57deb02775f7",
+      "role": "member",
+      "joined_at": "2026-02-25T09:33:52.010654",
+      "added_by": null
+    },
+    {
+      "id": "04014772-8bdc-433f-a8d4-e4d9b2c0ffc8",
+      "created_at": "2026-02-25T09:34:49.139888",
+      "updated_at": "2026-02-25T09:34:49.139891",
+      "deleted_at": null,
+      "team_id": "c591fde6-7d91-44c8-b4b5-3a43977ebd1e",
+      "user_id": "d9378bbb-97de-4d2b-a76b-2232e0e9b053",
+      "role": "member",
+      "joined_at": "2026-02-25T09:34:49.139893",
+      "added_by": null
+    },
+    {
+      "id": "d0141575-7743-4a0a-b9a3-247eff2d3c39",
+      "created_at": "2026-02-25T09:34:52.256143",
+      "updated_at": "2026-02-25T09:34:52.256146",
+      "deleted_at": null,
+      "team_id": "c591fde6-7d91-44c8-b4b5-3a43977ebd1e",
+      "user_id": "126345e5-21e4-4b58-9c3e-57deb02775f7",
+      "role": "member",
+      "joined_at": "2026-02-25T09:34:52.256148",
+      "added_by": null
+    },
+    {
+      "id": "bdfb2713-f9c2-4e61-9892-2585d1298371",
+      "created_at": "2026-02-26T07:58:02.281025",
+      "updated_at": "2026-02-26T07:58:02.281028",
+      "deleted_at": null,
+      "team_id": "76614bcf-e47e-4e98-b3eb-119a2c5f4ea4",
+      "user_id": "06508822-5357-4327-8a08-7898f203c690",
+      "role": "member",
+      "joined_at": "2026-02-26T07:58:02.281030",
+      "added_by": null
+    },
+    {
+      "id": "137309a4-a94f-4bef-8fc5-9daf63b9c04e",
+      "created_at": "2026-02-26T07:58:38.884138",
+      "updated_at": "2026-02-26T07:58:38.884139",
+      "deleted_at": null,
+      "team_id": "76614bcf-e47e-4e98-b3eb-119a2c5f4ea4",
+      "user_id": "c63d6c65-c5b8-42f9-a2a4-835179897b34",
+      "role": "member",
+      "joined_at": "2026-02-26T07:58:38.884140",
+      "added_by": null
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "lead_scoring_rules": [
+    {
+      "id": "score-rule-001",
+      "name": "Email Domain Authority",
+      "category": "source_credibility",
+      "rules": [
+        {
+          "condition": "email_domain_in_list",
+          "value": ["@gmail.com", "@yahoo.com"],
+          "score": 20,
+          "description": "Free email domain - lower authority"
+        },
+        {
+          "condition": "email_domain_in_list",
+          "value": ["@company.com", "@enterprise.com"],
+          "score": 50,
+          "description": "Company domain - verified professional"
+        },
+        {
+          "condition": "email_contains",
+          "value": "@",
+          "score": 10,
+          "description": "Valid email format"
+        }
+      ]
+    },
+    {
+      "id": "score-rule-002",
+      "name": "Company Size Impact",
+      "category": "company_profile",
+      "rules": [
+        {
+          "condition": "company_employee_count_range",
+          "min": 0,
+          "max": 50,
+          "score": 30,
+          "description": "Startup - Small enterprise"
+        },
+        {
+          "condition": "company_employee_count_range",
+          "min": 51,
+          "max": 500,
+          "score": 60,
+          "description": "Mid-size company"
+        },
+        {
+          "condition": "company_employee_count_range",
+          "min": 501,
+          "max": 5000,
+          "score": 80,
+          "description": "Large enterprise"
+        }
+      ]
+    },
+    {
+      "id": "score-rule-003",
+      "name": "Engagement Level",
+      "category": "interaction_signal",
+      "rules": [
+        {
+          "condition": "form_completion_percentage",
+          "min": 50,
+          "max": 75,
+          "score": 25,
+          "description": "Partial form completion"
+        },
+        {
+          "condition": "form_completion_percentage",
+          "min": 76,
+          "max": 100,
+          "score": 50,
+          "description": "Complete form submission"
+        },
+        {
+          "condition": "time_spent_on_site_seconds",
+          "min": 300,
+          "max": 600,
+          "score": 30,
+          "description": "3-10 minutes engagement"
+        },
+        {
+          "condition": "pages_visited",
+          "min": 5,
+          "max": 100,
+          "score": 40,
+          "description": "Multiple page views show interest"
+        }
+      ]
+    },
+    {
+      "id": "score-rule-004",
+      "name": "Referral Source Boost",
+      "category": "source_type",
+      "rules": [
+        {
+          "condition": "source_is",
+          "value": "website_form",
+          "score": 0,
+          "description": "Organic web visitor - baseline"
+        },
+        {
+          "condition": "source_is",
+          "value": "email_campaign",
+          "score": 15,
+          "description": "Email campaign subscriber"
+        },
+        {
+          "condition": "source_is",
+          "value": "linkedin",
+          "score": 25,
+          "description": "LinkedIn outreach - professional intent"
+        },
+        {
+          "condition": "source_is",
+          "value": "phone_inquiry",
+          "score": 30,
+          "description": "Direct phone call - high intent"
+        },
+        {
+          "condition": "source_is",
+          "value": "referral",
+          "score": 50,
+          "description": "Customer referral - trusted recommendation"
+        }
+      ]
+    },
+    {
+      "id": "score-rule-005",
+      "name": "Competitor/Industry Keywords",
+      "category": "vertical_fit",
+      "rules": [
+        {
+          "condition": "message_contains_keywords",
+          "value": ["inventory", "stock", "warehouse", "logistics"],
+          "score": 40,
+          "description": "Supply chain industry match"
+        },
+        {
+          "condition": "message_contains_keywords",
+          "value": ["sales", "crm", "pipeline", "conversion"],
+          "score": 35,
+          "description": "Sales operations fit"
+        },
+        {
+          "condition": "message_contains_keywords",
+          "value": ["urgent", "asap", "immediate", "priority"],
+          "score": 25,
+          "description": "Time-sensitive need"
+        }
+      ]
+    },
+    {
+      "id": "score-rule-006",
+      "name": "Location Preference",
+      "category": "geographic",
+      "rules": [
+        {
+          "condition": "location_in_territories",
+          "value": ["bangalore", "mumbai", "delhi"],
+          "score": 20,
+          "description": "Tier-1 city - easy follow-up"
+        },
+        {
+          "condition": "location_in_territories",
+          "value": ["usa", "uk", "eu"],
+          "score": 50,
+          "description": "International - enterprise potential"
+        }
+      ]
+    }
+  ],
+  "quality_tiers": [
+    {
+      "tier": "cold",
+      "min_score": 0,
+      "max_score": 30,
+      "response_priority": "low",
+      "auto_assign": false,
+      "description": "Low engagement, generic inquiry"
+    },
+    {
+      "tier": "warm",
+      "min_score": 31,
+      "max_score": 60,
+      "response_priority": "normal",
+      "auto_assign": true,
+      "sla_buffer_minutes": 15,
+      "description": "Moderate engagement, good fit"
+    },
+    {
+      "tier": "hot",
+      "min_score": 61,
+      "max_score": 85,
+      "response_priority": "high",
+      "auto_assign": true,
+      "sla_buffer_minutes": 5,
+      "description": "High engagement, strong fit"
+    },
+    {
+      "tier": "vip",
+      "min_score": 86,
+      "max_score": 100,
+      "response_priority": "critical",
+      "auto_assign": true,
+      "assign_to_manager": true,
+      "sla_buffer_minutes": 0,
+      "description": "Referral or strategic opportunity"
+    }
+  ]
+}

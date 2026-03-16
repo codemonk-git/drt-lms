@@ -1,0 +1,75 @@
+{
+  "form_submissions": [
+    {
+      "id": "submission-001",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-001",
+      "lead_name": "Kamal Sharma",
+      "form_id": "92f72bde-f1c1-4d1f-94ab-0ceea07f0a91",
+      "form_name": "Initial Qualification",
+      "stage_id": "574ae1e5-50d4-4e6a-b746-d10a0516d080",
+      "stage_name": "nqw",
+      "submitted_by": "user-003",
+      "submitted_by_name": "Mike Sales Rep",
+      "submitted_at": "2026-02-01T08:00:00Z",
+      "data": {
+        "budget_range": "100K-500K",
+        "timeline": "3-6 months",
+        "key_needs": "Improve sales pipeline management and lead tracking"
+      },
+      "status": "submitted",
+      "version": 1
+    },
+    {
+      "id": "submission-002",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-002",
+      "lead_name": "Shaili Chouhan",
+      "form_id": "8893eede-3231-4e30-8ab4-08c74bcb9ce6",
+      "form_name": "Demo Request",
+      "stage_id": "578fdf36-3059-4b0a-9ce0-5d99c0c06803",
+      "stage_name": "qe",
+      "submitted_by": "user-002",
+      "submitted_by_name": "Sarah Sales Manager",
+      "submitted_at": "2026-02-01T09:30:00Z",
+      "data": {
+        "preferred_date": "2026-02-05",
+        "preferred_time": "2:00 PM",
+        "number_of_attendees": 3,
+        "additional_notes": "Focus on integration capabilities with existing systems"
+      },
+      "status": "submitted",
+      "version": 1
+    },
+    {
+      "id": "submission-003",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-004",
+      "lead_name": "Rajesh Kumar",
+      "form_id": "form-003",
+      "form_name": "Proposal Review",
+      "stage_id": "stage-003",
+      "stage_name": "Proposal",
+      "submitted_by": "user-004",
+      "submitted_by_name": "Emma Support",
+      "submitted_at": "2026-02-01T10:15:00Z",
+      "data": {
+        "proposal_sent_date": "2026-02-01",
+        "expected_review_date": "2026-02-08",
+        "internal_decision_maker": "Rajesh Kumar (CFO)",
+        "concerns_or_questions": "Pricing negotiation needed for 3-year contract"
+      },
+      "status": "submitted",
+      "version": 1,
+      "attachments": [
+        {
+          "id": "attach-001",
+          "type": "quotation",
+          "filename": "Quotation-FinancePlus-200000.pdf",
+          "uploaded_at": "2026-02-01T10:15:00Z",
+          "size": 245000
+        }
+      ]
+    }
+  ]
+}

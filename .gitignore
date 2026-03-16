@@ -1,0 +1,44 @@
+# Flutter
+.dart_tool/
+build/
+flutter_build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv
+*.egg-info/
+dist/
+.env
+
+# Node
+node_modules/
+.npm
+.node_modules/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Backend
+backend/data/scheduled_jobs.json
+
+# Angular
+angular-app/dist/
+angular-app/node_modules/
+
+# Firebase
+*.json.bak
+
+# OS
+.DS_Store
+Thumbs.db

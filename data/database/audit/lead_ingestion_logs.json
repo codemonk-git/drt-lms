@@ -1,0 +1,144 @@
+{
+  "lead_ingestion_logs": [
+    {
+      "id": "ingest-001",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-001",
+      "lead_name": "Kamal Sharma",
+      "source_id": "source-001",
+      "source_name": "Website Form",
+      "ingestion_timestamp": "2026-02-01T06:49:13Z",
+      "raw_data": {
+        "first_name": "Kamal",
+        "last_name": "Sharma",
+        "email": "kamalsharma.git@gmail.com",
+        "phone": "+919675475113",
+        "company": "XYZ Solutions",
+        "location": "Bangalore",
+        "message": "Interested in enterprise CRM solution"
+      },
+      "processing_steps": [
+        {
+          "step": "validation",
+          "status": "success",
+          "timestamp": "2026-02-01T06:49:15Z"
+        },
+        {
+          "step": "deduplication",
+          "status": "success",
+          "timestamp": "2026-02-01T06:49:16Z",
+          "result": "new_lead"
+        },
+        {
+          "step": "lead_scoring",
+          "status": "success",
+          "timestamp": "2026-02-01T06:49:17Z",
+          "score": 75,
+          "quality": "warm"
+        },
+        {
+          "step": "routing_rule_match",
+          "status": "success",
+          "timestamp": "2026-02-01T06:49:18Z",
+          "matched_rule": "rule-001",
+          "strategy": "round_robin"
+        },
+        {
+          "step": "assignment",
+          "status": "success",
+          "timestamp": "2026-02-01T07:00:00Z",
+          "assigned_to": "user-003",
+          "assigned_to_name": "Mike Sales Rep",
+          "team": "team-001"
+        },
+        {
+          "step": "sla_setup",
+          "status": "success",
+          "timestamp": "2026-02-01T07:00:01Z",
+          "first_response_deadline": "2026-02-01T08:00:00Z",
+          "resolution_deadline": "2026-02-03T07:00:00Z"
+        },
+        {
+          "step": "notification_sent",
+          "status": "success",
+          "timestamp": "2026-02-01T07:00:02Z",
+          "notification_type": "email",
+          "channel": "in_app"
+        }
+      ],
+      "status": "completed",
+      "time_to_assign_seconds": 671
+    },
+    {
+      "id": "ingest-004",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-004",
+      "lead_name": "Rajesh Kumar",
+      "source_id": "source-005",
+      "source_name": "Referral Program",
+      "ingestion_timestamp": "2026-02-01T06:05:00Z",
+      "raw_data": {
+        "first_name": "Rajesh",
+        "last_name": "Kumar",
+        "email": "rajesh.k@financeplus.com",
+        "phone": "+918765432109",
+        "company": "Finance Plus",
+        "referrer": "existing_customer_id_123",
+        "referrer_name": "Previous Client"
+      },
+      "processing_steps": [
+        {
+          "step": "validation",
+          "status": "success",
+          "timestamp": "2026-02-01T06:05:01Z"
+        },
+        {
+          "step": "deduplication",
+          "status": "success",
+          "timestamp": "2026-02-01T06:05:02Z",
+          "result": "new_lead"
+        },
+        {
+          "step": "lead_scoring",
+          "status": "success",
+          "timestamp": "2026-02-01T06:05:03Z",
+          "score": 95,
+          "quality": "hot",
+          "boost_reason": "referral"
+        },
+        {
+          "step": "routing_rule_match",
+          "status": "success",
+          "timestamp": "2026-02-01T06:05:04Z",
+          "matched_rule": "rule-005",
+          "strategy": "specific_user"
+        },
+        {
+          "step": "assignment",
+          "status": "success",
+          "timestamp": "2026-02-01T06:10:00Z",
+          "assigned_to": "user-002",
+          "assigned_to_name": "Sarah Sales Manager",
+          "team": "team-001",
+          "reason": "VIP referral - assigned to top performer"
+        },
+        {
+          "step": "sla_setup",
+          "status": "success",
+          "timestamp": "2026-02-01T06:10:01Z",
+          "first_response_deadline": "2026-02-01T06:20:00Z",
+          "resolution_deadline": "2026-02-01T08:10:00Z",
+          "priority": "critical"
+        },
+        {
+          "step": "notification_sent",
+          "status": "success",
+          "timestamp": "2026-02-01T06:10:02Z",
+          "notification_type": "urgent_priority"
+        }
+      ],
+      "status": "completed",
+      "time_to_assign_seconds": 300
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "lead_sources": [
+    {
+      "id": "source-001",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "name": "Website Form",
+      "type": "website",
+      "url": "https://acmecorp.com/contact",
+      "routing_rule_id": "rule-001",
+      "default_team_id": "team-001",
+      "lead_quality_score": 70,
+      "created_at": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": "source-002",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "name": "Email Inquiry",
+      "type": "email",
+      "email": "sales@acmecorp.com",
+      "routing_rule_id": "rule-002",
+      "default_team_id": "team-001",
+      "lead_quality_score": 60,
+      "created_at": "2026-01-15T10:15:00Z"
+    },
+    {
+      "id": "source-003",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "name": "LinkedIn Ads",
+      "type": "linkedin",
+      "campaign_id": "campaign-001",
+      "routing_rule_id": "rule-003",
+      "default_team_id": "team-001",
+      "lead_quality_score": 80,
+      "created_at": "2026-01-20T14:30:00Z"
+    },
+    {
+      "id": "source-004",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "name": "Phone Inquiry",
+      "type": "phone",
+      "phone": "+1-800-SALES-1",
+      "routing_rule_id": "rule-004",
+      "default_team_id": "team-001",
+      "lead_quality_score": 85,
+      "created_at": "2026-01-25T09:00:00Z"
+    },
+    {
+      "id": "source-005",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "name": "Referral Program",
+      "type": "referral",
+      "routing_rule_id": "rule-005",
+      "default_team_id": "team-001",
+      "lead_quality_score": 90,
+      "created_at": "2026-01-28T11:20:00Z"
+    }
+  ]
+}

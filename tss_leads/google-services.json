@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "775722913264",
+    "project_id": "leads-tss",
+    "storage_bucket": "leads-tss.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775722913264:android:9a612056bf47878bd32135",
+        "android_client_info": {
+          "package_name": "com.example.tss_leads"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkOAhfM9T08G_LScPfyLkaOW6W62ijSL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,123 @@
+{
+  "deduplication_rules": [
+    {
+      "id": "dedup-001",
+      "name": "Exact Email Match",
+      "match_fields": ["email"],
+      "confidence": 99,
+      "action": "skip_and_merge",
+      "description": "Same email address = same person",
+      "lookback_days": 365
+    },
+    {
+      "id": "dedup-002",
+      "name": "Phone Number Match",
+      "match_fields": ["phone"],
+      "confidence": 95,
+      "action": "skip_and_merge",
+      "description": "Same phone = likely same lead",
+      "lookback_days": 180,
+      "rules": {
+        "normalize": true,
+        "remove_country_code": false
+      }
+    },
+    {
+      "id": "dedup-003",
+      "name": "Name + Company + Email",
+      "match_fields": ["first_name", "last_name", "company", "email"],
+      "confidence": 98,
+      "action": "skip_and_merge",
+      "description": "Combination match across multiple submissions",
+      "lookback_days": 365
+    },
+    {
+      "id": "dedup-004",
+      "name": "Name + Phone",
+      "match_fields": ["first_name", "last_name", "phone"],
+      "confidence": 85,
+      "action": "flag_for_review",
+      "description": "Likely same person, review if different company",
+      "lookback_days": 90
+    },
+    {
+      "id": "dedup-005",
+      "name": "Similar Email Fuzzy Match",
+      "match_fields": ["email"],
+      "similarity_threshold": 0.85,
+      "confidence": 70,
+      "action": "flag_for_review",
+      "description": "Similar but not exact email (typos, variations)",
+      "lookback_days": 180,
+      "examples": [
+        "john@example.com vs jon@example.com",
+        "sarah.smith@company.com vs sarahsmith@company.com"
+      ]
+    }
+  ],
+  "merge_rules": {
+    "when_duplicate_found": {
+      "keep_newer": true,
+      "preserve_activities": true,
+      "merge_custom_fields": "newer_overwrites_older",
+      "create_audit_entry": true,
+      "notify_assignee": true
+    },
+    "field_priority": {
+      "email": "prefer_non_empty",
+      "phone": "prefer_non_empty",
+      "company": "prefer_longer_string",
+      "address": "prefer_more_complete",
+      "source": "keep_primary_source"
+    }
+  },
+  "duplicate_detection_examples": [
+    {
+      "scenario": "Same person, different email typo",
+      "lead_1": {
+        "name": "John Smith",
+        "email": "john@example.com",
+        "phone": "+919876543210"
+      },
+      "lead_2": {
+        "name": "John Smith",
+        "email": "jon@example.com",
+        "phone": "+919876543210"
+      },
+      "action": "Flag and ask: Do you want to merge these leads?",
+      "confidence": 85
+    },
+    {
+      "scenario": "Same company, multiple decision makers",
+      "lead_1": {
+        "name": "Sarah Johnson",
+        "email": "sarah.johnson@acme.com",
+        "company": "ACME Corp"
+      },
+      "lead_2": {
+        "name": "Mike Johnson",
+        "email": "mike.johnson@acme.com",
+        "company": "ACME Corp"
+      },
+      "action": "Keep separate - different contacts at same company",
+      "confidence": 0
+    },
+    {
+      "scenario": "Person changed email, resubmitted",
+      "lead_1": {
+        "name": "Lisa Chen",
+        "email": "lisa.chen@oldcompany.com",
+        "phone": "+919555551234",
+        "created": "2025-12-01"
+      },
+      "lead_2": {
+        "name": "Lisa Chen",
+        "email": "lisa.chen@newcompany.com",
+        "phone": "+919555551234",
+        "created": "2026-02-01"
+      },
+      "action": "Merge and update - same person, job change",
+      "confidence": 90
+    }
+  ]
+}

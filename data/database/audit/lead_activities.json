@@ -1,0 +1,180 @@
+{
+  "lead_activities": [
+    {
+      "id": "activity-001",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-001",
+      "lead_name": "Kamal Sharma",
+      "type": "lead_created",
+      "created_by": "user-001",
+      "created_by_name": "John Administrator",
+      "created_at": "2026-02-01T06:49:13Z",
+      "data": {
+        "source": "email",
+        "initial_stage": "nqw"
+      }
+    },
+    {
+      "id": "activity-002",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-001",
+      "lead_name": "Kamal Sharma",
+      "type": "assignment",
+      "assigned_by": "user-002",
+      "assigned_by_name": "Sarah Sales Manager",
+      "assigned_at": "2026-02-01T07:00:00Z",
+      "data": {
+        "assigned_to": "user-003",
+        "assigned_to_name": "Mike Sales Rep",
+        "stage": "nqw",
+        "reason": "Initial qualification assignment"
+      }
+    },
+    {
+      "id": "activity-003",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-001",
+      "lead_name": "Kamal Sharma",
+      "type": "form_submitted",
+      "submitted_by": "user-003",
+      "submitted_by_name": "Mike Sales Rep",
+      "submitted_at": "2026-02-01T08:00:00Z",
+      "data": {
+        "form_name": "Initial Qualification",
+        "form_id": "92f72bde-f1c1-4d1f-94ab-0ceea07f0a91",
+        "stage": "nqw"
+      }
+    },
+    {
+      "id": "activity-004",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-001",
+      "lead_name": "Kamal Sharma",
+      "type": "stage_changed",
+      "changed_by": "user-003",
+      "changed_by_name": "Mike Sales Rep",
+      "changed_at": "2026-02-01T08:30:00Z",
+      "data": {
+        "from_stage": "nqw",
+        "from_stage_name": "New",
+        "to_stage": "578fdf36-3059-4b0a-9ce0-5d99c0c06803",
+        "to_stage_name": "qe",
+        "reason": "Qualified based on initial call and budget confirmation"
+      }
+    },
+    {
+      "id": "activity-005",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-001",
+      "lead_name": "Kamal Sharma",
+      "type": "reassignment",
+      "reassigned_by": "system",
+      "reassigned_at": "2026-02-01T08:30:00Z",
+      "data": {
+        "from_user": "user-003",
+        "from_user_name": "Mike Sales Rep",
+        "to_user": "user-002",
+        "to_user_name": "Sarah Sales Manager",
+        "stage_changed_to": "qe",
+        "reason": "Auto-reassigned to stage handler (Manager handles qe stage)",
+        "is_auto_reassignment": true
+      }
+    },
+    {
+      "id": "activity-006",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-002",
+      "lead_name": "Shaili Chouhan",
+      "type": "lead_created",
+      "created_by": "user-001",
+      "created_by_name": "John Administrator",
+      "created_at": "2026-02-01T06:03:29Z",
+      "data": {
+        "source": "phone",
+        "initial_stage": "qe"
+      }
+    },
+    {
+      "id": "activity-007",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-002",
+      "lead_name": "Shaili Chouhan",
+      "type": "assignment",
+      "assigned_by": "user-001",
+      "assigned_by_name": "John Administrator",
+      "assigned_at": "2026-02-01T06:10:00Z",
+      "data": {
+        "assigned_to": "user-002",
+        "assigned_to_name": "Sarah Sales Manager",
+        "stage": "qe",
+        "reason": "Manager handles qualified leads"
+      }
+    },
+    {
+      "id": "activity-008",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-002",
+      "lead_name": "Shaili Chouhan",
+      "type": "form_submitted",
+      "submitted_by": "user-002",
+      "submitted_by_name": "Sarah Sales Manager",
+      "submitted_at": "2026-02-01T09:30:00Z",
+      "data": {
+        "form_name": "Demo Request",
+        "form_id": "8893eede-3231-4e30-8ab4-08c74bcb9ce6",
+        "stage": "qe"
+      }
+    },
+    {
+      "id": "activity-009",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-004",
+      "lead_name": "Rajesh Kumar",
+      "type": "stage_changed",
+      "changed_by": "user-002",
+      "changed_by_name": "Sarah Sales Manager",
+      "changed_at": "2026-02-01T09:45:00Z",
+      "data": {
+        "from_stage": "qe",
+        "from_stage_name": "Qualified",
+        "to_stage": "stage-003",
+        "to_stage_name": "Proposal",
+        "reason": "Ready for proposal generation"
+      }
+    },
+    {
+      "id": "activity-010",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-004",
+      "lead_name": "Rajesh Kumar",
+      "type": "reassignment",
+      "reassigned_by": "system",
+      "reassigned_at": "2026-02-01T09:45:00Z",
+      "data": {
+        "from_user": "user-002",
+        "from_user_name": "Sarah Sales Manager",
+        "to_user": "user-004",
+        "to_user_name": "Emma Support",
+        "stage_changed_to": "Proposal",
+        "reason": "Auto-reassigned to stage handler (Quotation Specialist handles Proposal stage)",
+        "is_auto_reassignment": true
+      }
+    },
+    {
+      "id": "activity-011",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-004",
+      "lead_name": "Rajesh Kumar",
+      "type": "form_submitted",
+      "submitted_by": "user-004",
+      "submitted_by_name": "Emma Support",
+      "submitted_at": "2026-02-01T10:15:00Z",
+      "data": {
+        "form_name": "Proposal Review",
+        "form_id": "form-003",
+        "stage": "Proposal",
+        "attachments": ["quotation.pdf"]
+      }
+    }
+  ]
+}

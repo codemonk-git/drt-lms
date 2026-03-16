@@ -1,0 +1,452 @@
+INFO:     Will watch for changes in these directories: ['/Users/apple/dev/experiments/ang_exp/backend/server']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [58929] using WatchFiles
+INFO:     Started server process [59020]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55093 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55148 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55175 - "GET /api/stages HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55203 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+INFO:     127.0.0.1:55221 - "GET /api/leads/3aa365bd-4515-47ee-acf4-ab56b42a8195/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55271 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/Users/apple/.pyenv/versions/3.12.1/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+[LOGIN] Received email: shailisharma@gmail.com, password length: 8
+[AUTH] Looking for user with email: shailisharma@gmail.com
+[AUTH] Found user: <server.domains.users.models.User object at 0x10bfb20c0>
+[AUTH] Verifying password. Hash starts with: $2b$12$f2eCk8yEEYHxp...
+[AUTH] Password verified successfully
+[LOGIN] Auth result: <server.domains.users.models.User object at 0x10bfb20c0>
+INFO:     127.0.0.1:55315 - "POST /api/auth/login?email=shailisharma%40gmail.com&password=admin123 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55315 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55315 - "GET /api/teams/user/d9378bbb-97de-4d2b-a76b-2232e0e9b053 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55315 - "GET /api/leads HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55315 - "GET /api/stages HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55337 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55392 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user 4105489a-9a59-4054-8279-81d87179835e: No module named 'server.shared.database'
+INFO:     127.0.0.1:55419 - "GET /api/leads/54c8eb56-6640-49b3-bef9-6c9ebb8773fd/notes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55420 - "GET /api/leads/54c8eb56-6640-49b3-bef9-6c9ebb8773fd/activities HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55449 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55510 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55564 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55617 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55672 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55732 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55785 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55840 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55893 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+INFO:     127.0.0.1:55912 - "GET /api/leads/3aa365bd-4515-47ee-acf4-ab56b42a8195/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:55959 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56015 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56067 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56121 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56175 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56235 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56297 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56350 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56402 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56463 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56517 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56570 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+INFO:     127.0.0.1:56580 - "GET /api/leads/3aa365bd-4515-47ee-acf4-ab56b42a8195/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56629 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56684 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56738 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56792 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56844 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56906 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:56958 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57011 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57063 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57124 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57176 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57229 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+INFO:     127.0.0.1:57239 - "GET /api/leads/3aa365bd-4515-47ee-acf4-ab56b42a8195/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57288 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57351 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57403 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57458 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57510 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57564 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57624 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57678 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57730 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57782 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57842 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57894 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+INFO:     127.0.0.1:57904 - "GET /api/leads/3aa365bd-4515-47ee-acf4-ab56b42a8195/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:57951 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:58003 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:58065 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:58120 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:58172 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:58227 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:58289 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+Debug: Failed to lookup user d9378bbb-97de-4d2b-a76b-2232e0e9b053: No module named 'server.shared.database'
+INFO:     127.0.0.1:58342 - "GET /api/leads/d8821370-98c7-4419-aa23-5cdf72b48f15/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58376 - "GET /api/stages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58382 - "GET /api/teams?skip=0&limit=100&company_id=401f0ffc-6c34-4310-8970-5313fe84f721 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58383 - "GET /api/users?skip=0&limit=1000&company_id=401f0ffc-6c34-4310-8970-5313fe84f721 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58384 - "GET /api/followups/company/401f0ffc-6c34-4310-8970-5313fe84f721/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58386 - "GET /api/forms?skip=0&limit=100&company_id=401f0ffc-6c34-4310-8970-5313fe84f721 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58385 - "GET /api/teams?skip=0&limit=10&company_id=401f0ffc-6c34-4310-8970-5313fe84f721 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58390 - "GET /api/companies/401f0ffc-6c34-4310-8970-5313fe84f721 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58402 - "GET /api/stages/c6fa5367-3475-4965-94a7-c7af51c0dd08/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58401 - "GET /api/stages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58408 - "GET /api/stages/deca1833-5793-430a-97ed-61220eb09888/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58411 - "GET /api/stages/ce8c9c17-2106-4014-bc63-2f7f4d46c161/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58412 - "GET /api/teams?skip=0&limit=100&company_id=401f0ffc-6c34-4310-8970-5313fe84f721 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58423 - "GET /api/stages/59699b83-7858-47c7-a476-33d0adaa65fa/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58426 - "GET /api/users?skip=0&limit=1000&company_id=401f0ffc-6c34-4310-8970-5313fe84f721 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58432 - "GET /api/followups/company/401f0ffc-6c34-4310-8970-5313fe84f721/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58433 - "GET /api/forms?skip=0&limit=100&company_id=401f0ffc-6c34-4310-8970-5313fe84f721 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58434 - "GET /api/stages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58436 - "GET /api/stages/c6fa5367-3475-4965-94a7-c7af51c0dd08/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58440 - "GET /api/stages/deca1833-5793-430a-97ed-61220eb09888/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58444 - "GET /api/stages/ce8c9c17-2106-4014-bc63-2f7f4d46c161/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58454 - "GET /api/teams/89271ff3-5600-4617-b7f7-54a629a6c250/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58458 - "GET /api/stages/59699b83-7858-47c7-a476-33d0adaa65fa/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58460 - "GET /api/leads?skip=0&limit=100&company_id=401f0ffc-6c34-4310-8970-5313fe84f721 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58457 - "GET /api/teams/c591fde6-7d91-44c8-b4b5-3a43977ebd1e/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58466 - "GET /api/leads?skip=0&limit=1000&company_id=401f0ffc-6c34-4310-8970-5313fe84f721 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58470 - "GET /api/users?skip=0&limit=1000&company_id=401f0ffc-6c34-4310-8970-5313fe84f721 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58472 - "GET /api/stages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58476 - "GET /api/stages/c6fa5367-3475-4965-94a7-c7af51c0dd08/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58481 - "GET /api/stages/deca1833-5793-430a-97ed-61220eb09888/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58484 - "GET /api/stages/ce8c9c17-2106-4014-bc63-2f7f4d46c161/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58501 - "GET /api/stages/59699b83-7858-47c7-a476-33d0adaa65fa/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58500 - "GET /api/followups/company/401f0ffc-6c34-4310-8970-5313fe84f721/all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58502 - "GET /api/leads?skip=0&limit=100&company_id=401f0ffc-6c34-4310-8970-5313fe84f721 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58506 - "GET /api/users/dad42b22-08cb-4fd5-8fcc-a487a6a9adda HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58508 - "GET /api/users/d9378bbb-97de-4d2b-a76b-2232e0e9b053 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58507 - "GET /api/users/126345e5-21e4-4b58-9c3e-57deb02775f7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58517 - "GET /api/users?skip=0&limit=1000&company_id=401f0ffc-6c34-4310-8970-5313fe84f721 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58518 - "GET /api/stages/c6fa5367-3475-4965-94a7-c7af51c0dd08/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58522 - "GET /api/stages/deca1833-5793-430a-97ed-61220eb09888/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58526 - "GET /api/stages/ce8c9c17-2106-4014-bc63-2f7f4d46c161/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58530 - "GET /api/stages/59699b83-7858-47c7-a476-33d0adaa65fa/forms HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58532 - "GET /api/leads?skip=0&limit=100&company_id=401f0ffc-6c34-4310-8970-5313fe84f721 HTTP/1.1" 200 OK
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+INFO:     127.0.0.1:58711 - "GET /api/leads/3aa365bd-4515-47ee-acf4-ab56b42a8195/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+Debug: Failed to lookup user 724ee166-30a8-41f5-9817-55d326a7b12e: No module named 'server.shared.database'
+INFO:     127.0.0.1:59136 - "GET /api/leads/3aa365bd-4515-47ee-acf4-ab56b42a8195/activities?skip=0&limit=100 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59260 - "OPTIONS /api/auth/login?email=shailisharma%40gmail.com&password=admin123 HTTP/1.1" 200 OK
+[LOGIN] Received email: shailisharma@gmail.com, password length: 8
+[AUTH] Looking for user with email: shailisharma@gmail.com
+[AUTH] Found user: <server.domains.users.models.User object at 0x10bfb1fd0>
+[AUTH] Verifying password. Hash starts with: $2b$12$f2eCk8yEEYHxp...
+[AUTH] Password verified successfully
+[LOGIN] Auth result: <server.domains.users.models.User object at 0x10bfb1fd0>
+INFO:     127.0.0.1:59260 - "POST /api/auth/login?email=shailisharma%40gmail.com&password=admin123 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59260 - "OPTIONS /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59262 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59262 - "OPTIONS /api/teams/user/d9378bbb-97de-4d2b-a76b-2232e0e9b053 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59260 - "GET /api/teams/user/d9378bbb-97de-4d2b-a76b-2232e0e9b053 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59260 - "OPTIONS /api/leads HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59262 - "GET /api/leads HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59262 - "OPTIONS /api/stages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59260 - "GET /api/stages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59260 - "OPTIONS /api/leads/54c8eb56-6640-49b3-bef9-6c9ebb8773fd/notes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59262 - "OPTIONS /api/leads/54c8eb56-6640-49b3-bef9-6c9ebb8773fd/activities HTTP/1.1" 200 OK
+Debug: Failed to lookup user 4105489a-9a59-4054-8279-81d87179835e: No module named 'server.shared.database'
+INFO:     127.0.0.1:59260 - "GET /api/leads/54c8eb56-6640-49b3-bef9-6c9ebb8773fd/notes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59262 - "GET /api/leads/54c8eb56-6640-49b3-bef9-6c9ebb8773fd/activities HTTP/1.1" 200 OK

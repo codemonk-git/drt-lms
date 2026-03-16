@@ -1,0 +1,52 @@
+{
+  "assignments": [
+    {
+      "id": "assign-001",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-001",
+      "lead_name": "Kamal Sharma",
+      "user_id": "user-003",
+      "user_name": "Mike Sales Rep",
+      "assigned_at": "2026-02-01T07:00:00Z",
+      "assigned_by": "user-002",
+      "status": "active",
+      "notes": "High priority, enterprise deal"
+    },
+    {
+      "id": "assign-002",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-002",
+      "lead_name": "Shaili Chouhan",
+      "user_id": "user-002",
+      "user_name": "Sarah Sales Manager",
+      "assigned_at": "2026-02-01T06:30:00Z",
+      "assigned_by": "user-001",
+      "status": "active",
+      "notes": "Manager oversight for qualified lead"
+    },
+    {
+      "id": "assign-003",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-003",
+      "lead_name": "Priya Patel",
+      "user_id": "user-003",
+      "user_name": "Mike Sales Rep",
+      "assigned_at": "2026-01-28T12:00:00Z",
+      "assigned_by": "user-002",
+      "status": "active",
+      "notes": "New inbound lead, follow up required"
+    },
+    {
+      "id": "assign-004",
+      "company_id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "lead_id": "lead-004",
+      "lead_name": "Rajesh Kumar",
+      "user_id": "user-002",
+      "user_name": "Sarah Sales Manager",
+      "assigned_at": "2026-01-20T15:00:00Z",
+      "assigned_by": "user-001",
+      "status": "active",
+      "notes": "High-value referral, close to decision"
+    }
+  ]
+}

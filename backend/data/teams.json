@@ -1,0 +1,82 @@
+{
+  "teams": [
+    {
+      "id": "4221dfb1-c6db-44ee-859b-9a52cf131350",
+      "created_at": "2026-02-02T05:59:07.069615",
+      "updated_at": "2026-02-02T05:59:07.069632",
+      "deleted_at": null,
+      "company_id": "cae14e43-1177-4de4-9c4c-fd647a69186b",
+      "name": "shaili team",
+      "description": null,
+      "slug": "shaili-team",
+      "parent_team_id": null,
+      "team_lead_id": null,
+      "created_by": "4105489a-9a59-4054-8279-81d87179835e"
+    },
+    {
+      "id": "9e3271ee-4058-46b6-a03c-7db753144f9c",
+      "created_at": "2026-02-02T05:59:53.495378",
+      "updated_at": "2026-02-02T05:59:53.495393",
+      "deleted_at": null,
+      "company_id": "cae14e43-1177-4de4-9c4c-fd647a69186b",
+      "name": "sales",
+      "description": null,
+      "slug": "sales",
+      "parent_team_id": null,
+      "team_lead_id": null,
+      "created_by": "4105489a-9a59-4054-8279-81d87179835e"
+    },
+    {
+      "id": "2c766756-0f53-40d4-92a3-6a6caed35dbd",
+      "created_at": "2026-02-02T10:47:18.866503",
+      "updated_at": "2026-02-02T10:47:18.866516",
+      "deleted_at": null,
+      "company_id": "cae14e43-1177-4de4-9c4c-fd647a69186b",
+      "name": "site visit",
+      "description": null,
+      "slug": "site-visit",
+      "parent_team_id": null,
+      "team_lead_id": null,
+      "created_by": "4105489a-9a59-4054-8279-81d87179835e"
+    },
+    {
+      "id": "89271ff3-5600-4617-b7f7-54a629a6c250",
+      "created_at": "2026-02-25T09:32:53.706319",
+      "updated_at": "2026-02-28T11:08:59.335295",
+      "deleted_at": null,
+      "company_id": "401f0ffc-6c34-4310-8970-5313fe84f721",
+      "name": "Dubai",
+      "description": "Dubai Real Estate",
+      "slug": "dubai",
+      "parent_team_id": null,
+      "team_lead_id": "d9378bbb-97de-4d2b-a76b-2232e0e9b053",
+      "created_by": "bd735d58-bc4d-4cf6-9c50-4b782e89d246"
+    },
+    {
+      "id": "c591fde6-7d91-44c8-b4b5-3a43977ebd1e",
+      "created_at": "2026-02-25T09:33:24.061820",
+      "updated_at": "2026-02-25T12:24:56.006241",
+      "deleted_at": null,
+      "company_id": "401f0ffc-6c34-4310-8970-5313fe84f721",
+      "name": "Max Estate",
+      "description": "Max Estate",
+      "slug": "max-estate",
+      "parent_team_id": null,
+      "team_lead_id": "126345e5-21e4-4b58-9c3e-57deb02775f7",
+      "created_by": "bd735d58-bc4d-4cf6-9c50-4b782e89d246"
+    },
+    {
+      "id": "76614bcf-e47e-4e98-b3eb-119a2c5f4ea4",
+      "created_at": "2026-02-26T07:57:10.812664",
+      "updated_at": "2026-02-26T08:02:45.764370",
+      "deleted_at": null,
+      "company_id": "2f271d6b-adfb-4e6c-80cc-41aabaa83662",
+      "name": "Max estate",
+      "description": "Max Estate Greater Noida",
+      "slug": "max-estate",
+      "parent_team_id": null,
+      "team_lead_id": "06508822-5357-4327-8a08-7898f203c690",
+      "created_by": "e751fb8f-df21-44b1-ab50-a5fc8ca91321"
+    }
+  ]
+}

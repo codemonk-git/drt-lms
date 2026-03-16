@@ -1,0 +1,34 @@
+{
+  "companies": [
+    {
+      "id": "bb306f77-b774-4d12-85fb-5ab5c5923a1e",
+      "name": "Acme Corp",
+      "email": "admin@acmecorp.com",
+      "phone": "+1-800-555-0123",
+      "website": "https://acmecorp.com",
+      "industry": "Technology",
+      "size": "100-500",
+      "address": "123 Business Ave, San Francisco, CA 94105",
+      "timezone": "America/Los_Angeles",
+      "plan": "professional",
+      "created_at": "2026-01-15T10:30:00Z",
+      "updated_at": "2026-01-31T15:45:00Z",
+      "active": true
+    },
+    {
+      "id": "a1b2c3d4-e5f6-4789-abcd-ef1234567890",
+      "name": "TechStart Inc",
+      "email": "contact@techstart.com",
+      "phone": "+1-800-555-0456",
+      "website": "https://techstart.io",
+      "industry": "Software",
+      "size": "50-100",
+      "address": "456 Innovation Blvd, Austin, TX 78701",
+      "timezone": "America/Chicago",
+      "plan": "starter",
+      "created_at": "2026-02-01T08:00:00Z",
+      "updated_at": "2026-02-01T08:00:00Z",
+      "active": true
+    }
+  ]
+}
