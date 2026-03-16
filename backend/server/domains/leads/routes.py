@@ -351,7 +351,7 @@ async def update_lead_stage(lead_id: str, request: Request):
             updated_by_user_id=user_id,
         )
         
-        return lead.__dict__
+        return {"status": "success", "data": lead.to_dict() if hasattr(lead, 'to_dict') else lead.__dict__}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
@@ -395,7 +395,7 @@ async def update_lead_call_status(lead_id: str, request: Request):
             metadata=full_metadata
         )
         
-        return lead.__dict__
+        return {"status": "success", "data": lead.to_dict() if hasattr(lead, 'to_dict') else lead.__dict__}
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
