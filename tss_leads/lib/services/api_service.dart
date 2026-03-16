@@ -18,9 +18,19 @@ class ApiException implements Exception {
 }
 
 class ApiService {
+  // Configuration: Set to true to use local network IP instead of localhost
+  // Useful for testing on physical devices on the same network
+  static const bool useNetworkIp = false;
+  static const String networkIp = '192.168.1.7:8000/api'; // Physical device on network
+
   // Auto-detect API URL based on platform
   static String _getBaseUrl() {
     try {
+      // If explicitly using network IP for physical device testing
+      if (useNetworkIp) {
+        return 'http://$networkIp';
+      }
+
       // For Android emulator, use 10.0.2.2 (special alias for host localhost)
       // For physical devices and iOS, use localhost
       if (Platform.isAndroid) {
